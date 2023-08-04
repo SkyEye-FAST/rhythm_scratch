@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 import re, os, pyperclip
 from random import sample
 
@@ -19,7 +21,7 @@ ORZVER = "2.18.21"
 
 # 定义初始化曲库函数
 def ini(name, dict):
-    f = open(p + "dict_" + name, "r", encoding="utf-8")
+    f = open(p + "dict" + os.path.sep + name, "r", encoding="utf-8")
     line = f.readline()
     while line:
         dict.append(line[:-1])
