@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-import re, os, pyperclip
+import re, os, sys, pyperclip
 from random import sample
 
 # 调用路径
@@ -78,6 +78,54 @@ def output_print(name):
         print(str(i) + ". " + e)
 
 
+# 定义显示帮助
+def print_help():
+    print(
+        """+----------------------+--------------------------+
+|         命令         |           功能           |
++----------------------+--------------------------+
+|                     通用命令                    |
++----------------------+--------------------------+
+|     h | help | ?     |         显示帮助         |
++----------------------+--------------------------+
+|       e | exit       |           退出           |
++----------------------+--------------------------+
+|   v | ver | version  | 显示曲库使用的音游版本号 |
++----------------------+--------------------------+
+|                    一次性命令                   |
++----------------------+--------------------------+
+|    (u | use) <num>   |      选择使用的曲库      |
++----------------------+--------------------------+
+|                  游戏中可用命令                 |
++----------------------+--------------------------+
+|       s | show       |         显示题目         |
++----------------------+--------------------------+
+|   (o | open) <char>  |        刮开某字符        |
++----------------------+--------------------------+
+|  (c | correct) <num> |      将某题全部刮开      |
++----------------------+--------------------------+
+| (d | decrease) <num> |     减少可用刮开次数     |
++----------------------+--------------------------+
+| (i | increase) <num> |     增加可用刮开次数     |
++----------------------+--------------------------+"""
+    )
+
+
+# 定义通用命令
+def uni_cmds(r):
+    if re.match(r"^(version|ver|v)$", r):
+        print(
+            "曲库使用的Arcaea版本：%s\n曲库使用的Phiros版本：%s\n曲库使用的Orzmic版本：%s"
+            % (ARCVER, PGRVER, ORZVER)
+        )
+    elif re.match(r"^(exit|e)$", r):
+        sys.exit()
+    elif re.match(r"^(help|h|\?)$", r):
+        print_help()
+    else:
+        print("无效的命令。")
+
+
 # 定义命令相关函数
 def cmd_char_judge(c, s):
     if re.match("^" + c + "\\s", s):
@@ -101,6 +149,7 @@ print(
     """
 音游猜曲名刮刮乐
 作者：SkyEye_FAST
+
 目前支持的音游：Arcaea、Phigros、Orzmic
 曲库使用的Arcaea版本：%s
 曲库使用的Phiros版本：%s
@@ -108,19 +157,28 @@ print(
 """
     % (ARCVER, PGRVER, ORZVER)
 )
+print_help()
 
 # 选择游戏，初始化曲库
-r = input("请选择游戏（可多选，如12）\n1. Arcaea\n2. Phigros\n3. Orzmic\n\n>> ")
 d = []
-if "1" in r:
-    ini("arc_slst", d)
-    ini("arc_other", d)
-if "2" in r:
-    ini("pgr", d)
-if "3" in r:
-    ini("orz", d)
-d = list(set(d))  # 去除重复曲目
-print("选择曲目总数：%d\n" % len(d))
+while d == []:
+    r = input(
+        "\n请使用命令“use”或“u”选择曲库（可多选，如“u 12”）\n1. Arcaea\n2. Phigros\n3. Orzmic\n\n>> "
+    )
+    r.replace("use", "u")
+    if cmd_num_judge("u", r):
+        n = r[2:]
+        if "1" in n:
+            ini("arc_slst", d)
+            ini("arc_other", d)
+        if "2" in n:
+            ini("pgr", d)
+        if "3" in n:
+            ini("orz", d)
+        d = list(set(d))  # 去除重复曲目
+        print("选择曲目总数：%d\n" % len(d))
+    else:
+        uni_cmds(r)
 
 # 生成答案
 a = sample(d, NUM)
@@ -234,30 +292,8 @@ while heart > 0 and t != a:
         else:
             output_print(t)
         copy("Temp")
-
-    elif re.match(r"^(version|ver|v)$", r):
-        print(
-            "曲库使用的Arcaea版本：%s\n曲库使用的Phiros版本：%s\n曲库使用的Orzmic版本：%s"
-            % (ARCVER, PGRVER, ORZVER)
-        )
-
-    elif re.match(r"^(exit|e)$", r):
-        break
-
-    elif re.match(r"^(help|h|\?)$", r):
-        print(
-            " 帮助 ".center(44, "-")
-            + """\nh | help | ? - 显示帮助
-e | exit - 退出
-v | ver | version - 显示曲库使用的Arcaea版本号
-s | show - 显示题目
-(o | open) <char> - 刮开某字符
-(c | correct) <num> - 将某题全部刮开
-(d | decrease) <num> - 减少可用刮开次数
-(i | increase) <num> - 增加可用刮开次数"""
-        )
     else:
-        print("无效的命令。")
+        uni_cmds(r)
 
 if not re.match(r"^(exit|e)$", r):
     if t == a:
