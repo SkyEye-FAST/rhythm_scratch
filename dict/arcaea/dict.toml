@@ -1,0 +1,3 @@
+name = "Arcaea"
+version = "v4.5.3"
+dicts = ["arc_slst", "arc_other"]
