@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-import os, re, sys, pyperclip, tomllib
+import os, re, sys, pyperclip, tomllib, unicodedata
 from random import sample
 
 # 加载配置
@@ -139,8 +139,8 @@ def main():
     heart = GUESS_CHANCES  # 刮开可用次数
     t = question_list  # 题目暂存
     tt = question_list  # 题目暂存的暂存
-    opened_char_list = []  # 刮开的字符，拉丁字母大小写
-    opened_char_lowercase_list = []  # 刮开的字符，拉丁字母全部小写
+    opened_char_list = []  # 刮开的字符，字母大小写
+    opened_char_lowercase_list = []  # 刮开的字符，字母全部小写
 
     while heart > 0 and t != answer_list:
         command = input("\n>> ")  # 输入命令
@@ -167,10 +167,8 @@ def main():
         elif action == "e":
             sys.exit()
         elif action == "v":
-            i = 0
-            while i < len(games):
-                print(f"曲库使用的{games[i]}版本：{versions[i]}\n")
-                i += 1
+            for i, game in enumerate(games):
+                print(f"曲库使用的{game}版本：{versions[i]}")
         elif action == "o":
             if len(parts[1]) != 1:
                 print("无效的参数，应为单个字符。")
@@ -183,12 +181,12 @@ def main():
                     print(f"这个字符已经刮开了！剩余次数：{heart}。")
                 else:
                     opened_char_lowercase_list.append(parts[1].lower())
-                    if re.match(r"^[A-Za-z]$", input_char):  # 判断是否为拉丁字母
+                    if unicodedata.category(input_char) == 'L':  # 判断是否为字母
                         opened_char_list.extend(
                             [input_char.lower(), input_char.upper()]
                         )  # 加入小写和大写
                     else:
-                        opened_char_list.append(input_char)  # 加入非拉丁字母字符
+                        opened_char_list.append(input_char)  # 加入非字母字符
                     heart -= 1  # 扣除1点可用刮开次数
                     print(f"刮开的字符：{parts[1]}。\n剩余次数：{heart}。")
                     # 为正则替换而合并opened_char_list为字符串
