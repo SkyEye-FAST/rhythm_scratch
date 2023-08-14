@@ -20,44 +20,45 @@ OUTPUT_FOLDER = os.path.join(P, config["path"]["output_folder"])  # 输出路径
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 # 加载曲库列表
-games = versions = all_dicts_folder = []
-for i in os.listdir(DICT_FOLDER):
-    dict_config_file = os.path.join(DICT_FOLDER, i, "dict.toml")
-    if os.path.exists(dict_config_file) and (
-        dict_config := tomllib.load(open(dict_config_file, "rb"))
-    ):
-        all_dicts_folder.append(i)
+all_dicts_folder = [
+    i
+    for i in os.listdir(DICT_FOLDER)
+    if os.path.exists(os.path.join(DICT_FOLDER, i, "dict.toml"))
+]
+games = []
+versions = []
+for folder in all_dicts_folder:
+    dict_config_file = os.path.join(DICT_FOLDER, folder, "dict.toml")
+    with open(dict_config_file, "rb") as f:
+        dict_config = tomllib.load(f)
         games.append(dict_config["name"])
         versions.append(dict_config["version"])
 
 
 # 定义加载曲库为列表函数
-def load_dict(file_path):
-    with open(os.path.join(DICT_FOLDER, file_path), "r", encoding="utf-8") as file:
-        dict_content = [line.strip() for line in file]
-    return dict_content
+load_dict = lambda file_path: [
+    line.strip()
+    for line in open(os.path.join(DICT_FOLDER, file_path), "r", encoding="utf-8")
+]
 
 
 # 定义复制文件内容到剪贴板函数
-def copy(file):
-    with open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8") as f:
-        pyperclip.copy(f.read())
+copy = lambda file: pyperclip.copy(
+    open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8").read()
+)
 
 
 # 定义已开字符函数
-def known_char(name):
-    if name:
-        return "已开字符：" + "、".join(name) + "。"
-    else:
-        return ""
+known_char = lambda name: f"已开字符：{'、'.join(name)}。" if name else ""
 
 
 class output:
     # 定义输出文件函数
-    @staticmethod
-    def to_file(name, file):
-        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
-            f.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
+    to_file = lambda name, file: [
+        open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8").writelines(
+            f"{i + 1}. {element}\n" for i, element in enumerate(name)
+        )
+    ]
 
     # 定义输出暂存到文件函数
     @staticmethod
@@ -69,10 +70,9 @@ class output:
             f.writelines(lines)
 
     # 定义循环输出函数
-    @staticmethod
-    def loop_print(name):
-        for i, element in enumerate(name):
-            print(f"{i + 1}. {element}")
+    loop_print = lambda name: [
+        print(f"{i + 1}. {element}") for i, element in enumerate(name)
+    ]
 
     # 定义输出帮助函数
     @staticmethod
@@ -91,8 +91,8 @@ class output:
 def main():
     print("音游猜曲名刮刮乐\n作者：SkyEye_FAST\n\n可用的曲库：")
     # 输出曲库列表
-    for i, (game, version) in enumerate(zip(games, versions), start=1):
-        print(f"{i}. {game}（游戏版本：{version}）")
+    for i, game in enumerate(games):
+        print(f"{i + 1}. {game}（游戏版本：{versions[i]}）")
     # 选择曲库
     selected_dicts = input("请选择曲库编号，以逗号分隔：\n\n>> ").split(",")
     selected_dicts = [
