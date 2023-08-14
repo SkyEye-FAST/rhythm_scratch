@@ -1,4 +1,11 @@
+[const]
 # 生成曲目数量
 generate_amount = 10
 # 刮开可用次数
 guess_chances = 10
+
+[path]
+# 输出文件夹
+output_folder = "output"
+# 曲库文件夹
+dict_folder = "song_dict"

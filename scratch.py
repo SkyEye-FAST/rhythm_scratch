@@ -3,26 +3,27 @@
 import re, os, sys, pyperclip, tomllib
 from random import sample
 
+# 加载配置
+with open("configuration.toml", "rb") as f:
+    config = tomllib.load(f)
+
+# 常量
+NUM = config["const"]["generate_amount"]  # 生成曲目数量
+GUESS_CHANCES = config["const"]["guess_chances"]  # 最初刮开可用次数
+
 # 路径
 P = os.path.abspath(
     os.path.dirname(os.path.abspath(__file__)) + os.path.sep + "."
 )  # 当前绝对路径
-DICT_FOLDER = os.path.join(P, "dict")  # 词库路径
-OUTPUT_FOLDER = os.path.join(P, "output")  # 输出路径
+DICT_FOLDER = os.path.join(P, config["path"]["dict_folder"])  # 曲库路径
+OUTPUT_FOLDER = os.path.join(P, config["path"]["output_folder"])  # 输出路径
 
 # 创建输出文件夹（若不存在）
 if not os.path.exists(OUTPUT_FOLDER):
     os.makedirs(OUTPUT_FOLDER)
 
-# 加载配置
-with open("configuration.toml", "rb") as f:
-    config = tomllib.load(f)
-
-NUM = config["generate_amount"]  # 生成曲目数量
-GUESS_CHANCES = config["guess_chances"]  # 最初刮开可用次数
-
 # 加载曲库列表
-games, versions, all_dicts_folder = []
+games, versions, all_dicts_folder = [], [], []
 for i in os.listdir(DICT_FOLDER):
     dict_config = os.path.join(DICT_FOLDER, i, "dict.toml")
     if os.path.exists(dict_config):
@@ -81,7 +82,7 @@ class output:
             print(f"{i + 1}. {element}")
 
     # 定义输出帮助函数
-    def h(self):
+    def h():
         print("可用命令：")
         print("  help | ? - 显示帮助")
         print("  exit - 退出")
@@ -139,7 +140,7 @@ def main():
         question_list.append("*" * len(element))
     output.to_file(question_list, "Question")
     copy("Question")
-    print("题目：")
+    print("输入“?”来查看帮助。\n\n题目：")
     output.loop_print(question_list)
 
     # 刮卡
