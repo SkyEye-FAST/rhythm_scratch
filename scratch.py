@@ -54,11 +54,13 @@ def known_char(name):
 
 class output:
     # 定义输出文件函数
+    @staticmethod
     def to_file(name, file):
         with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
             f.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
 
     # 定义输出暂存到文件函数
+    @staticmethod
     def to_temp(known, name, file):
         with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
             if known:
@@ -67,11 +69,13 @@ class output:
             f.writelines(lines)
 
     # 定义循环输出函数
+    @staticmethod
     def loop_print(name):
         for i, element in enumerate(name):
             print(f"{i + 1}. {element}")
 
     # 定义输出帮助函数
+    @staticmethod
     def h():
         print("可用命令：")
         print("  help | ? - 显示帮助")
@@ -238,7 +242,6 @@ def main():
                     print("无效的命令，请重试。")
             else:
                 print("无效的命令，请重试。")
-
 
         elif action == "s":
             if t == []:
