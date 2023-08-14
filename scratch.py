@@ -99,7 +99,7 @@ def main():
         int(index.strip()) for index in selected_dicts if index.strip().isdigit()
     ]
     if len(selected_dicts) == 0:
-        print("未选择任何曲库。")
+        print("未按格式输入，请重试。")
         sys.exit()
     # 加载曲库
     selected_dict_content = []
