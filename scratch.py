@@ -102,27 +102,25 @@ def main():
         print("未选择任何曲库。")
         sys.exit()
     # 加载曲库
-    selected_dict_content = [
-        load_dict(
-            os.path.join(DICT_FOLDER, all_dicts_folder[index - 1], "dict", element)
-        )
-        for index in selected_dicts
-        if 0 < index <= len(all_dicts_folder)
-        for element in tomllib.load(
-            open(
-                os.path.join(DICT_FOLDER, all_dicts_folder[index - 1], "dict.toml"),
-                "rb",
-            )
-        )["dicts"]
-    ]
+    selected_dict_content = []
+
     for index in selected_dicts:
-        if 0 < index <= len(all_dicts_folder):
+        if 1 <= index <= len(all_dicts_folder):
+            folder = all_dicts_folder[index - 1]
+            dict_config_file = os.path.join(DICT_FOLDER, folder, "dict.toml")
+            with open(dict_config_file, "rb") as f:
+                dict_config = tomllib.load(f)
+                for element in dict_config["dicts"]:
+                    selected_dict_content.extend(
+                        load_dict(os.path.join(DICT_FOLDER, folder, "dict", element))
+                    )
             print(f"已加载曲库“{games[index - 1]}”。")
         else:
             print(f"编号为“{index}”的曲库不存在，忽略。")
 
     selected_dict_content = list(set(selected_dict_content))  # 去除重复曲目
-    print(f"选择曲目总数：{len(selected_dict_content)}\n")
+    total_selected = len(selected_dict_content)
+    print(f"选择曲目总数：{total_selected}\n")
 
     # 生成答案
     answer_list = sample(selected_dict_content, 10)
@@ -139,8 +137,10 @@ def main():
 
     # 刮卡
     heart = GUESS_CHANCES  # 刮开可用次数
-    t = tt = question_list  # 题目暂存、题目暂存的暂存
-    opened_char = opened_char_lowercase = []  # 刮开的字符（拉丁字母大小写、拉丁字母全部小写）
+    t = question_list  # 题目暂存
+    tt = question_list  # 题目暂存的暂存
+    opened_char_list = []  # 刮开的字符，拉丁字母大小写
+    opened_char_lowercase_list = []  # 刮开的字符，拉丁字母全部小写
 
     while heart > 0 and t != answer_list:
         command = input("\n>> ")  # 输入命令
@@ -179,34 +179,37 @@ def main():
                 if input_char in "-$( )*+.[]{{}}?\\^|/":
                     input_char = "\\" + input_char  # 转义字符
 
-                if input_char in opened_char:
+                if input_char in opened_char_list:
                     print(f"这个字符已经刮开了！剩余次数：{heart}。")
                 else:
-                    opened_char_lowercase.append(input_char.lower())
+                    opened_char_lowercase_list.append(parts[1].lower())
                     if re.match(r"^[A-Za-z]$", input_char):  # 判断是否为拉丁字母
-                        opened_char.extend(
+                        opened_char_list.extend(
                             [input_char.lower(), input_char.upper()]
                         )  # 加入小写和大写
                     else:
-                        opened_char.append(input_char)  # 加入非拉丁字母字符
+                        opened_char_list.append(input_char)  # 加入非拉丁字母字符
                     heart -= 1  # 扣除1点可用刮开次数
                     print(f"刮开的字符：{parts[1]}。\n剩余次数：{heart}。")
-                    used_char = "".join(opened_char)  # 合并opened_char为字符串
+                    # 为正则替换而合并opened_char_list为字符串
+                    opened_char = "".join(opened_char_list)
+                    # 使用正则替换刮开字符
                     t = [
-                        re.sub("[^" + used_char + "\\s]", "*", element)
+                        re.sub("[^" + opened_char + "\\s]", "*", element)
                         for element in answer_list
-                    ]  # 使用正则替换刮开字符
+                    ]
+                    # 将回答正确的全部刮开
                     t = [
                         answer_list[i] if tt[i] == answer_list[i] else t[i]
                         for i in range(NUM)
-                    ]  # 将回答正确的全部刮开
-                    output.to_temp(known_char(opened_char_lowercase), t, "Temp")
+                    ]
+                    kc = known_char(opened_char_lowercase_list)
+                    output.to_temp(kc, t, "Temp")
                     copy("Temp")
-                    known = known_char(opened_char_lowercase)
-                    if known:
-                        print(known)
+                    if kc:
+                        print(kc)
                     output.loop_print(t)
-                    tt, t = t, []  # 更新暂存和清空
+                    tt, t = t, []  # 更新暂存
 
         elif action == "c":
             if not parts[1].isdigit():
@@ -218,11 +221,11 @@ def main():
                 elif tt[n - 1] != answer_list[n - 1]:
                     print(f"编号为“{n}”的题目回答正确，全部刮开。")
                     tt[n - 1] = answer_list[n - 1]
-                    output.to_temp(known_char(opened_char_lowercase), tt, "Temp")
+                    kc = known_char(opened_char_lowercase_list)
+                    output.to_temp(kc, tt, "Temp")
                     copy("Temp")
-                    known = known_char(opened_char_lowercase)
-                    if known:
-                        print(known)
+                    if kc:
+                        print(kc)
                     output.loop_print(tt)
                     t = tt
                 else:
