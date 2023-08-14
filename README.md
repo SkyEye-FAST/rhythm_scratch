@@ -11,7 +11,7 @@
 ## 命令列表
 
 - help | ? - 显示帮助
-- exit - 退出
+- exit | e - 退出
 - version | ver | v - 列出曲库使用音游版本号
 - (heart | h) add [amount] - 增加可用刮开次数
 - (heart | h) remove [amount] - 减少可用刮开次数

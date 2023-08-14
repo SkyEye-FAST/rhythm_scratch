@@ -12,9 +12,7 @@ NUM = config["const"]["generate_amount"]  # 生成曲目数量
 GUESS_CHANCES = config["const"]["guess_chances"]  # 最初刮开可用次数
 
 # 路径
-P = os.path.abspath(
-    os.path.dirname(os.path.abspath(__file__)) + os.path.sep + "."
-)  # 当前绝对路径
+P = os.path.abspath(os.getcwd())  # 当前绝对路径
 DICT_FOLDER = os.path.join(P, config["path"]["dict_folder"])  # 曲库路径
 OUTPUT_FOLDER = os.path.join(P, config["path"]["output_folder"])  # 输出路径
 
@@ -85,7 +83,7 @@ class output:
     def h():
         print("可用命令：")
         print("  help | ? - 显示帮助")
-        print("  exit - 退出")
+        print("  exit | e - 退出")
         print("  version | ver | v - 列出曲库使用音游版本号")
         print("  (heart | h) add [amount] - 增加可用刮开次数")
         print("  (heart | h) remove [amount] - 减少可用刮开次数")
