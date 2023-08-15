@@ -33,7 +33,7 @@ pip install pyperclip
 
 目前提供的音游：Arcaea、Phigros、Orzmic。
 
-- 曲库使用的Arcaea版本：v4.5.3
+- 曲库使用的Arcaea版本：v4.6.1
 - 曲库使用的Phiros版本：3.1.1.1
 - 曲库使用的Orzmic版本：2.18.21
 
