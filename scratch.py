@@ -142,8 +142,9 @@ def main():
     tt = question_list  # 题目暂存的暂存
     opened_char_list = []  # 刮开的字符，字母大小写
     opened_char_lowercase_list = []  # 刮开的字符，字母全部小写
+    is_alive = True
 
-    while heart > 0 and t != answer_list:
+    while t != answer_list:
         command = input("\n>> ")  # 输入命令
 
         # 替换命令别名
@@ -164,6 +165,9 @@ def main():
         if action in command_aliases:
             action = command_aliases[action]
 
+        if heart <= 0:
+            is_alive = False
+
         if action == "?":
             output.h()
         elif action == "e":
@@ -173,6 +177,10 @@ def main():
                 print(f"曲库使用的{game}版本：{versions[i]}")
 
         elif action == "o":
+            if not is_alive:
+                print("刮开机会已用完。")
+                continue
+
             if len(parts[1]) != 1:
                 print("无效的参数，应为单个字符。")
             else:
@@ -214,6 +222,10 @@ def main():
                     output.loop_print(t)
                     tt, t = t, []  # 更新暂存
         elif action == "os":
+            if not is_alive:
+                print("刮开机会已用完。")
+                continue
+
             opened_char_list.append("\\s")
             opened_char_lowercase_list.append("空格")
 
@@ -281,10 +293,7 @@ def main():
             print("无效的命令，请重试。")
 
     if action != "e":
-        if t == answer_list:
-            print("\n回答正确，答案为：")
-        else:
-            print("\n次数已耗尽，答案为：")
+        print("\n全部题目已回答正确，答案为：")
         output.loop_print(answer_list)
         copy("Answer")
 
