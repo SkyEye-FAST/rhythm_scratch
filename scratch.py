@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-import os, re, sys, pyperclip, tomllib, unicodedata
+import os, re, sys, pyperclip, tomllib
 from random import sample
 
 # 加载配置
@@ -192,7 +192,10 @@ def main():
                     print(f"这个字符已经刮开了！剩余次数：{heart}。")
                 else:
                     opened_char_lowercase_list.append(parts[1].lower())
-                    if unicodedata.category(parts[1]) == "L":  # 判断是否为字母
+                    if re.match(
+                        r"^[\u0041-\u005a\u0061-\u007a\u0391-\u03c9\u0400-\u04ff]$",
+                        input_char,
+                    ):  # 判断是否为字母
                         opened_char_list.extend(
                             [input_char.lower(), input_char.upper()]
                         )  # 加入小写和大写
