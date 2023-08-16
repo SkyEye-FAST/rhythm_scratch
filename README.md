@@ -26,6 +26,7 @@ pip install pyperclip
 - (heart | h) add [amount] - 增加可用刮开次数
 - (heart | h) remove [amount] - 减少可用刮开次数
 - (open | o) [character] - 刮开指定字符
+- openspace | os - 刮开空格
 - (check | c) [index] - 将某题全部刮开
 - (show | s) - 显示题目
 

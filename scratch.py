@@ -84,6 +84,7 @@ class output:
         print("  (heart | h) add [amount] - 增加可用刮开次数")
         print("  (heart | h) remove [amount] - 减少可用刮开次数")
         print("  (open | o) [character] - 刮开指定字符")
+        print("  openspace | os - 刮开空格")
         print("  (check | c) [index] - 将某题全部刮开")
         print("  (show | s) - 显示题目")
 
@@ -156,6 +157,7 @@ def main():
             "version": "v",
             "help": "?",
             "？": "?",
+            "openspace": "os",
         }
         parts = command.split()
         action = parts[0]
@@ -169,6 +171,7 @@ def main():
         elif action == "v":
             for i, game in enumerate(games):
                 print(f"曲库使用的{game}版本：{versions[i]}")
+
         elif action == "o":
             if len(parts[1]) != 1:
                 print("无效的参数，应为单个字符。")
@@ -181,19 +184,21 @@ def main():
                     print(f"这个字符已经刮开了！剩余次数：{heart}。")
                 else:
                     opened_char_lowercase_list.append(parts[1].lower())
-                    if unicodedata.category(input_char) == 'L':  # 判断是否为字母
+                    if unicodedata.category(parts[1]) == "L":  # 判断是否为字母
                         opened_char_list.extend(
                             [input_char.lower(), input_char.upper()]
                         )  # 加入小写和大写
                     else:
                         opened_char_list.append(input_char)  # 加入非字母字符
+
                     heart -= 1  # 扣除1点可用刮开次数
+
                     print(f"刮开的字符：{parts[1]}。\n剩余次数：{heart}。")
                     # 为正则替换而合并opened_char_list为字符串
                     opened_char = "".join(opened_char_list)
                     # 使用正则替换刮开字符
                     t = [
-                        re.sub("[^" + opened_char + "\\s]", "*", element)
+                        re.sub(f"[^{opened_char}]", "*", element)
                         for element in answer_list
                     ]
                     # 将回答正确的全部刮开
@@ -208,6 +213,28 @@ def main():
                         print(kc)
                     output.loop_print(t)
                     tt, t = t, []  # 更新暂存
+        elif action == "os":
+            opened_char_list.append("\\s")
+            opened_char_lowercase_list.append("空格")
+
+            heart -= 1  # 扣除1点可用刮开次数
+
+            print(f"刮开的字符：空格。\n剩余次数：{heart}。")
+            # 为正则替换而合并opened_char_list为字符串
+            opened_char = "".join(opened_char_list)
+            # 使用正则替换刮开字符
+            t = [re.sub(f"[^{opened_char}]", "*", element) for element in answer_list]
+            # 将回答正确的全部刮开
+            t = [
+                answer_list[i] if tt[i] == answer_list[i] else t[i] for i in range(NUM)
+            ]
+            kc = known_char(opened_char_lowercase_list)
+            output.to_temp(kc, t, "Temp")
+            copy("Temp")
+            if kc:
+                print(kc)
+            output.loop_print(t)
+            tt, t = t, []  # 更新暂存
 
         elif action == "c":
             if not parts[1].isdigit():
