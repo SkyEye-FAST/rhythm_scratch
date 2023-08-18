@@ -124,7 +124,7 @@ def main():
     print(f"选择曲目总数：{total_selected}\n")
 
     # 生成答案
-    answer_list = sample(selected_dict_content, 10)
+    answer_list = sample(selected_dict_content, NUM)
     output.to_file(answer_list, "Answer")
 
     # 生成初始问题
