@@ -127,13 +127,13 @@ def main():
 
     # 生成答案
     answer_list = sample(selected_dict_content, NUM)
-    output.to_file(answer_list, "Answer")
+    output.to_file(answer_list, "Answer.txt")
 
     # 生成初始问题
     question_list = []
     for element in answer_list:
         question_list.append("*" * len(element))
-    output.to_file(question_list, "Question")
+    output.to_file(question_list, "Question.txt")
     copy("Question")
     print("输入“?”来查看帮助。\n\n题目：")
     output.loop_print(question_list)
@@ -220,7 +220,7 @@ def main():
                         for i in range(NUM)
                     ]
                     kc = known_char(opened_char_lowercase_list)
-                    output.to_temp(kc, t, "Temp")
+                    output.to_temp(kc, t, "Temp.txt")
                     copy("Temp")
                     if kc:
                         print(kc)
@@ -252,7 +252,7 @@ def main():
                     for i in range(NUM)
                 ]
                 kc = known_char(opened_char_lowercase_list)
-                output.to_temp(kc, t, "Temp")
+                output.to_temp(kc, t, "Temp.txt")
                 copy("Temp")
                 if kc:
                     print(kc)
@@ -270,7 +270,7 @@ def main():
                     print(f"编号为“{n}”的题目回答正确，全部刮开。")
                     tt[n - 1] = answer_list[n - 1]
                     kc = known_char(opened_char_lowercase_list)
-                    output.to_temp(kc, tt, "Temp")
+                    output.to_temp(kc, tt, "Temp.txt")
                     copy("Temp")
                     if kc:
                         print(kc)
