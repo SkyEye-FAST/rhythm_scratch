@@ -134,7 +134,7 @@ def main():
     for element in answer_list:
         question_list.append("*" * len(element))
     output.to_file(question_list, "Question.txt")
-    copy("Question")
+    copy("Question.txt")
     print("输入“?”来查看帮助。\n\n题目：")
     output.loop_print(question_list)
 
@@ -221,7 +221,7 @@ def main():
                     ]
                     kc = known_char(opened_char_lowercase_list)
                     output.to_temp(kc, t, "Temp.txt")
-                    copy("Temp")
+                    copy("Temp.txt")
                     if kc:
                         print(kc)
                     output.loop_print(t)
@@ -253,7 +253,7 @@ def main():
                 ]
                 kc = known_char(opened_char_lowercase_list)
                 output.to_temp(kc, t, "Temp.txt")
-                copy("Temp")
+                copy("Temp.txt")
                 if kc:
                     print(kc)
                 output.loop_print(t)
@@ -271,7 +271,7 @@ def main():
                     tt[n - 1] = answer_list[n - 1]
                     kc = known_char(opened_char_lowercase_list)
                     output.to_temp(kc, tt, "Temp.txt")
-                    copy("Temp")
+                    copy("Temp.txt")
                     if kc:
                         print(kc)
                     output.loop_print(tt)
@@ -299,14 +299,14 @@ def main():
                 output.loop_print(tt)
             else:
                 output.loop_print(t)
-            copy("Temp")
+            copy("Temp.txt")
         else:
             print("无效的命令，请重试。")
 
     if action != "e":
         print("\n全部题目已回答正确，答案为：")
         output.loop_print(answer_list)
-        copy("Answer")
+        copy("Answer.txt")
 
 
 if __name__ == "__main__":
