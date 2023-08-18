@@ -3,16 +3,18 @@
 import os, re, sys, pyperclip, tomllib
 from random import sample
 
+P = (
+    os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
+    + os.path.sep
+)  # 当前绝对路径
+
 # 加载配置
-with open("configuration.toml", "rb") as f:
+with open(os.path.join(P, "configuration.toml"), "rb") as f:
     config = tomllib.load(f)
 
 # 常量
 NUM = config["const"]["generate_amount"]  # 生成曲目数量
 GUESS_CHANCES = config["const"]["guess_chances"]  # 最初刮开可用次数
-
-# 路径
-P = os.path.abspath(os.getcwd())  # 当前绝对路径
 DICT_FOLDER = os.path.join(P, config["path"]["dict_folder"])  # 曲库路径
 OUTPUT_FOLDER = os.path.join(P, config["path"]["output_folder"])  # 输出路径
 
@@ -229,27 +231,33 @@ def main():
                 print("刮开机会已用完。")
                 continue
 
-            opened_char_list.append("\\s")
-            opened_char_lowercase_list.append("空格")
+            if "空格" in opened_char_list:
+                print(f"这个字符已经刮开了！剩余次数：{heart}。")
+            else:
+                opened_char_list.append("\\s")
+                opened_char_lowercase_list.append("空格")
 
-            heart -= 1  # 扣除1点可用刮开次数
+                heart -= 1  # 扣除1点可用刮开次数
 
-            print(f"刮开的字符：空格。\n剩余次数：{heart}。")
-            # 为正则替换而合并opened_char_list为字符串
-            opened_char = "".join(opened_char_list)
-            # 使用正则替换刮开字符
-            t = [re.sub(f"[^{opened_char}]", "*", element) for element in answer_list]
-            # 将回答正确的全部刮开
-            t = [
-                answer_list[i] if tt[i] == answer_list[i] else t[i] for i in range(NUM)
-            ]
-            kc = known_char(opened_char_lowercase_list)
-            output.to_temp(kc, t, "Temp")
-            copy("Temp")
-            if kc:
-                print(kc)
-            output.loop_print(t)
-            tt, t = t, []  # 更新暂存
+                print(f"刮开的字符：空格。\n剩余次数：{heart}。")
+                # 为正则替换而合并opened_char_list为字符串
+                opened_char = "".join(opened_char_list)
+                # 使用正则替换刮开字符
+                t = [
+                    re.sub(f"[^{opened_char}]", "*", element) for element in answer_list
+                ]
+                # 将回答正确的全部刮开
+                t = [
+                    answer_list[i] if tt[i] == answer_list[i] else t[i]
+                    for i in range(NUM)
+                ]
+                kc = known_char(opened_char_lowercase_list)
+                output.to_temp(kc, t, "Temp")
+                copy("Temp")
+                if kc:
+                    print(kc)
+                output.loop_print(t)
+                tt, t = t, []  # 更新暂存
 
         elif action == "c":
             if not parts[1].isdigit():
