@@ -40,7 +40,7 @@ for folder in all_dicts_folder:
 # 定义加载曲库为列表函数
 load_dict = lambda file_path: [
     line.strip()
-    for line in open(os.path.join(DICT_FOLDER, file_path), "r", encoding="utf-8")
+    for line in open(file_path, "r", encoding="utf-8")
 ]
 
 
