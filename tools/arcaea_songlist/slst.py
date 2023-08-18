@@ -1,18 +1,21 @@
-import json
+import json, os
+
+P = (
+    os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
+    + os.path.sep
+)
 
 # 打开songlist
-with open("songlist", "rb") as f:
+with open(os.path.join(P + "songlist"), "rb") as f:
     s = json.load(f)
 
 # 提取数据
 l = []
-
-for everything in s["songs"]:
-    title = everything["title_localized"]["en"]
+for element in s["songs"]:
+    title = element["title_localized"]["en"]
     l.append(title)
 
 # 写入曲库
-output = open("dict", "w", encoding="utf-8")
-for line in l:
-    output.write(line + "\n")
-output.close()
+with open(os.path.join(P + "dict"), "w", encoding="utf-8") as output:
+    for line in l:
+        output.write(line + "\n")
