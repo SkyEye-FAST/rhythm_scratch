@@ -39,7 +39,7 @@ pip install pyperclip
 - Arcaea（版本：v4.7.0）
 - Muse Dash（版本：3.6.0）
 - Orzmic（版本：2.19.28）
-- Phiros（版本：3.1.1.1）
+- Phiros（版本：3.1.3）
 - RYCEAM（版本：v1.0.5）
 
 ### 自定义曲库
