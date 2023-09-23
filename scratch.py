@@ -38,15 +38,15 @@ for folder in all_dicts_folder:
 
 
 # 定义加载曲库为列表函数
-load_dict = lambda file_path: [
-    line.strip() for line in open(file_path, "r", encoding="utf-8")
-]
+def load_dict(file_path):
+    with open(file_path, "r", encoding="utf-8") as file:
+        return [line.strip() for line in file]
 
 
 # 定义复制文件内容到剪贴板函数
-copy = lambda file: pyperclip.copy(
-    open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8").read()
-)
+def copy(file):
+    with open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8") as f:
+        pyperclip.copy(f.read())
 
 
 # 定义已开字符函数
@@ -55,11 +55,10 @@ known_char = lambda name: f"已开字符：{'、'.join(name)}。" if name else "
 
 class output:
     # 定义输出文件函数
-    to_file = lambda name, file: [
-        open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8").writelines(
-            f"{i + 1}. {element}\n" for i, element in enumerate(name)
-        )
-    ]
+    def to_file(name, file):
+        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
+            f.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
+
 
     # 定义输出暂存到文件函数
     @staticmethod
