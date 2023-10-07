@@ -36,8 +36,8 @@ pip install pyperclip
 
 目前仓库内提供的音游曲库如下：
 
-- Arcaea（版本：v4.7.0）
-- Muse Dash（版本：3.6.0）
+- Arcaea（版本：v5.0.1）
+- Muse Dash（版本：3.9.0）
 - Orzmic（版本：2.19.28）
 - Phiros（版本：3.1.3）
 - RYCEAM（版本：v1.0.5）
@@ -78,3 +78,9 @@ dicts = ["曲库文件1", "曲库文件2"]
 |-----------------|-------------|------------|
 | `output_folder` | `output`    | 输出文件夹 |
 | `dict_folder`   | `song_dict` | 曲库文件夹 |
+
+## 反馈
+
+遇到的问题和功能建议等可以提出议题（Issue）。
+
+欢迎创建拉取请求（Pull request）。
