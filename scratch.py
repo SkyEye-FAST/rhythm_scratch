@@ -3,10 +3,8 @@
 import os, re, sys, pyperclip, tomllib
 from random import sample
 
-P = (
-    os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
-    + os.path.sep
-)  # 当前绝对路径
+# 当前绝对路径
+P = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
 
 # 加载配置
 with open(os.path.join(P, "configuration.toml"), "rb") as f:
@@ -58,7 +56,6 @@ class output:
     def to_file(name, file):
         with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
             f.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
-
 
     # 定义输出暂存到文件函数
     @staticmethod
