@@ -144,6 +144,7 @@ def main():
     Output.loop_print(question_list)
 
     # 刮卡
+    action = ""
     heart = GUESS_CHANCES  # 刮开可用次数
     t = question_list  # 题目暂存
     tt = question_list  # 题目暂存的暂存
@@ -168,8 +169,7 @@ def main():
             "openspace": "os",
         }
         parts = command.split()
-        action = parts[0]
-        action = command_aliases.get(action)
+        action = command_aliases.get(parts[0], parts[0])
 
         if heart <= 0:
             is_alive = False
@@ -307,10 +307,10 @@ def main():
         else:
             print("无效的命令，请重试。")
 
-        if action != "e":
-            print("\n全部题目已回答正确，答案为：")
-            Output.loop_print(answer_list)
-            copy("Answer.txt")
+    if action != "e":
+        print("\n全部题目已回答正确，答案为：")
+        Output.loop_print(answer_list)
+        copy("Answer.txt")
 
 
 if __name__ == "__main__":
