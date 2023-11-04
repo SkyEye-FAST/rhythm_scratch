@@ -1,7 +1,12 @@
 # -*- encoding: utf-8 -*-
+"""音游猜曲名刮刮乐"""
 
-import os, re, sys, pyperclip, tomllib
 from random import sample
+import os
+import re
+import sys
+import tomllib
+import pyperclip
 
 # 当前绝对路径
 P = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
@@ -28,52 +33,56 @@ all_dicts_folder = [
 games = []
 versions = []
 for folder in all_dicts_folder:
-    dict_config_file = os.path.join(DICT_FOLDER, folder, "dict.toml")
-    with open(dict_config_file, "rb") as f:
+    dict_config = os.path.join(DICT_FOLDER, folder, "dict.toml")
+    with open(dict_config, "rb") as f:
         dict_config = tomllib.load(f)
         games.append(dict_config["name"])
         versions.append(dict_config["version"])
 
 
-# 定义加载曲库为列表函数
-def load_dict(file_path):
+def load_dict(file_path: str):
+    """加载曲库为列表函数"""
     with open(file_path, "r", encoding="utf-8") as file:
         return [line.strip() for line in file]
 
 
-# 定义复制文件内容到剪贴板函数
-def copy(file):
-    with open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8") as f:
-        pyperclip.copy(f.read())
+def copy(file: str):
+    """复制文件内容到剪贴板函数"""
+    with open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8") as text:
+        pyperclip.copy(text.read())
 
 
-# 定义已开字符函数
-known_char = lambda name: f"已开字符：{'、'.join(name)}。" if name else ""
+def known_char(name: list):
+    """已开字符函数"""
+    return f"已开字符：{'、'.join(name)}。" if name else ""
 
 
-class output:
-    # 定义输出文件函数
-    def to_file(name, file):
-        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
-            f.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
+class Output:
+    """输出类"""
 
-    # 定义输出暂存到文件函数
     @staticmethod
-    def to_temp(known, name, file):
-        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as f:
+    def to_file(name: list, file: str):
+        """输出文件函数"""
+        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as text:
+            text.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
+
+    @staticmethod
+    def to_temp(known: str, name: list, file: str):
+        """输出暂存到文件函数"""
+        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as text:
             if known:
-                f.write(known + "\n")
+                text.write(known + "\n")
             lines = [f"{i + 1}. {element}\n" for i, element in enumerate(name)]
-            f.writelines(lines)
+            text.writelines(lines)
 
-    # 定义循环输出函数
-    loop_print = lambda name: [
-        print(f"{i + 1}. {element}") for i, element in enumerate(name)
-    ]
+    @staticmethod
+    def loop_print(name: list):
+        """循环输出函数"""
+        return [print(f"{i + 1}. {element}") for i, element in enumerate(name)]
 
-    # 定义输出帮助函数
     @staticmethod
     def h():
+        """输出帮助函数"""
         print("可用命令：")
         print("  help | ? - 显示帮助")
         print("  exit | e - 退出")
@@ -87,6 +96,7 @@ class output:
 
 
 def main():
+    """主函数"""
     print("音游猜曲名刮刮乐\n作者：SkyEye_FAST\n\n可用的曲库：")
     # 输出曲库列表
     for i, game in enumerate(games):
@@ -104,13 +114,13 @@ def main():
 
     for index in selected_dicts:
         if 1 <= index <= len(all_dicts_folder):
-            folder = all_dicts_folder[index - 1]
-            dict_config_file = os.path.join(DICT_FOLDER, folder, "dict.toml")
-            with open(dict_config_file, "rb") as f:
-                dict_config = tomllib.load(f)
-                for element in dict_config["dicts"]:
+            get_folder = all_dicts_folder[index - 1]
+            dict_config_file = os.path.join(DICT_FOLDER, get_folder, "dict.toml")
+            with open(dict_config_file, "rb") as file:
+                dict_config_content = tomllib.load(file)
+                for element in dict_config_content["dicts"]:
                     selected_dict_content.extend(
-                        load_dict(os.path.join(DICT_FOLDER, folder, "dict", element))
+                        load_dict(os.path.join(DICT_FOLDER, get_folder, "dict", element))
                     )
             print(f"已加载曲库“{games[index - 1]}”。")
         else:
@@ -122,16 +132,16 @@ def main():
 
     # 生成答案
     answer_list = sample(selected_dict_content, NUM)
-    output.to_file(answer_list, "Answer.txt")
+    Output.to_file(answer_list, "Answer.txt")
 
     # 生成初始问题
     question_list = []
     for element in answer_list:
         question_list.append("*" * len(element))
-    output.to_file(question_list, "Question.txt")
+    Output.to_file(question_list, "Question.txt")
     copy("Question.txt")
     print("输入“?”来查看帮助。\n\n题目：")
-    output.loop_print(question_list)
+    Output.loop_print(question_list)
 
     # 刮卡
     heart = GUESS_CHANCES  # 刮开可用次数
@@ -159,14 +169,13 @@ def main():
         }
         parts = command.split()
         action = parts[0]
-        if action in command_aliases:
-            action = command_aliases[action]
+        action = command_aliases.get(action)
 
         if heart <= 0:
             is_alive = False
 
         if action == "?":
-            output.h()
+            Output.h()
         elif action == "e":
             sys.exit()
         elif action == "v":
@@ -215,11 +224,11 @@ def main():
                         for i in range(NUM)
                     ]
                     kc = known_char(opened_char_lowercase_list)
-                    output.to_temp(kc, t, "Temp.txt")
+                    Output.to_temp(kc, t, "Temp.txt")
                     copy("Temp.txt")
                     if kc:
                         print(kc)
-                    output.loop_print(t)
+                    Output.loop_print(t)
                     tt, t = t, []  # 更新暂存
         elif action == "os":
             if not is_alive:
@@ -247,11 +256,11 @@ def main():
                     for i in range(NUM)
                 ]
                 kc = known_char(opened_char_lowercase_list)
-                output.to_temp(kc, t, "Temp.txt")
+                Output.to_temp(kc, t, "Temp.txt")
                 copy("Temp.txt")
                 if kc:
                     print(kc)
-                output.loop_print(t)
+                Output.loop_print(t)
                 tt, t = t, []  # 更新暂存
 
         elif action == "c":
@@ -265,11 +274,11 @@ def main():
                     print(f"编号为“{n}”的题目回答正确，全部刮开。")
                     tt[n - 1] = answer_list[n - 1]
                     kc = known_char(opened_char_lowercase_list)
-                    output.to_temp(kc, tt, "Temp.txt")
+                    Output.to_temp(kc, tt, "Temp.txt")
                     copy("Temp.txt")
                     if kc:
                         print(kc)
-                    output.loop_print(tt)
+                    Output.loop_print(tt)
                     t = tt
                 else:
                     print(f"编号为“{n}”的题目已经回答正确。")
@@ -290,18 +299,18 @@ def main():
                 print("无效的命令，请重试。")
 
         elif action == "s":
-            if t == []:
-                output.loop_print(tt)
+            if not t:
+                Output.loop_print(tt)
             else:
-                output.loop_print(t)
+                Output.loop_print(t)
             copy("Temp.txt")
         else:
             print("无效的命令，请重试。")
 
-    if action != "e":
-        print("\n全部题目已回答正确，答案为：")
-        output.loop_print(answer_list)
-        copy("Answer.txt")
+        if action != "e":
+            print("\n全部题目已回答正确，答案为：")
+            Output.loop_print(answer_list)
+            copy("Answer.txt")
 
 
 if __name__ == "__main__":

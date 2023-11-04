@@ -1,8 +1,13 @@
+# -*- encoding: utf-8 -*-
+"""曲库重复内容检查器"""
+
 from collections import Counter  # 引入Counter
 
-load_dict = lambda file_path: [
-    line.strip() for line in open(file_path, "r", encoding="utf-8")
-]
+
+def load_dict(file_path: str):
+    """加载曲库函数"""
+    return [line.strip() for line in open(file_path, "r", encoding="utf-8")]
+
 
 dict_path = input("需要查重的曲库路径：")
 dict_content = load_dict(dict_path)

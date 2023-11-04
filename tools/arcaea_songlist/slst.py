@@ -1,4 +1,8 @@
-import json, os
+# -*- encoding: utf-8 -*-
+"""Arcaea Songlist提取工具"""
+
+import json
+import os
 
 P = (
     os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
