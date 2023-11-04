@@ -1,5 +1,7 @@
 # 音游猜曲名刮刮乐
 
+[![Pylint](https://github.com/SkyEye-FAST/rhythm_scratch/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/rhythm_scratch/actions/workflows/pylint.yml)
+
 **C++ 版本：<https://github.com/SkyEye-FAST/rhythm_scratch_cpp>**
 
 此脚本适用于即时通讯的群组/聊天室/服务器等处，**需要主持人来操作**，而非自主进行游戏。
