@@ -2,38 +2,36 @@
 """音游猜曲名刮刮乐"""
 
 from random import sample
-import os
 import re
 import sys
 import tomllib
+from pathlib import Path
 import pyperclip
 
 # 当前绝对路径
-P = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
+P = Path(__file__).resolve().parent
 
 # 加载配置
-with open(os.path.join(P, "configuration.toml"), "rb") as f:
+with open(P / "configuration.toml", "rb") as f:
     config = tomllib.load(f)
 
 # 常量
 NUM = config["const"]["generate_amount"]  # 生成曲目数量
 GUESS_CHANCES = config["const"]["guess_chances"]  # 最初刮开可用次数
-DICT_FOLDER = os.path.join(P, config["path"]["dict_folder"])  # 曲库路径
-OUTPUT_FOLDER = os.path.join(P, config["path"]["output_folder"])  # 输出路径
+DICT_FOLDER = P / config["path"]["dict_folder"]  # 曲库路径
+OUTPUT_FOLDER = P / config["path"]["output_folder"]  # 输出路径
 
 # 创建输出文件夹（若不存在）
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+OUTPUT_FOLDER.mkdir(exist_ok=True)
 
 # 加载曲库列表
 all_dicts_folder = [
-    i
-    for i in os.listdir(DICT_FOLDER)
-    if os.path.exists(os.path.join(DICT_FOLDER, i, "dict.toml"))
+    i for i in DICT_FOLDER.iterdir() if (DICT_FOLDER / i / "dict.toml").exists()
 ]
 games = []
 versions = []
 for folder in all_dicts_folder:
-    dict_config = os.path.join(DICT_FOLDER, folder, "dict.toml")
+    dict_config = DICT_FOLDER / folder / "dict.toml"
     with open(dict_config, "rb") as f:
         dict_config = tomllib.load(f)
         games.append(dict_config["name"])
@@ -48,7 +46,7 @@ def load_dict(file_path: str):
 
 def copy(file: str):
     """复制文件内容到剪贴板函数"""
-    with open(os.path.join(OUTPUT_FOLDER, file), "r", encoding="utf-8") as text:
+    with open(OUTPUT_FOLDER / file, "r", encoding="utf-8") as text:
         pyperclip.copy(text.read())
 
 
@@ -63,13 +61,13 @@ class Output:
     @staticmethod
     def to_file(name: list, file: str):
         """输出文件函数"""
-        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as text:
+        with open(OUTPUT_FOLDER / file, "w", encoding="utf-8") as text:
             text.writelines(f"{i + 1}. {element}\n" for i, element in enumerate(name))
 
     @staticmethod
     def to_temp(known: str, name: list, file: str):
         """输出暂存到文件函数"""
-        with open(os.path.join(OUTPUT_FOLDER, file), "w", encoding="utf-8") as text:
+        with open(OUTPUT_FOLDER / file, "w", encoding="utf-8") as text:
             if known:
                 text.write(known + "\n")
             lines = [f"{i + 1}. {element}\n" for i, element in enumerate(name)]
@@ -113,12 +111,12 @@ selected_dict_content = []
 for index in selected_dicts:
     if 1 <= index <= len(all_dicts_folder):
         get_folder = all_dicts_folder[index - 1]
-        dict_config_file = os.path.join(DICT_FOLDER, get_folder, "dict.toml")
+        dict_config_file = DICT_FOLDER / get_folder / "dict.toml"
         with open(dict_config_file, "rb") as dict_config:
             dict_config_content = tomllib.load(dict_config)
             for element in dict_config_content["dicts"]:
                 selected_dict_content.extend(
-                    load_dict(os.path.join(DICT_FOLDER, get_folder, "dict", element))
+                    load_dict(DICT_FOLDER / get_folder / "dict" / element)
                 )
         print(f"已加载曲库“{games[index - 1]}”。")
     else:
