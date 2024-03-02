@@ -2,24 +2,18 @@
 """Arcaea Songlist提取工具"""
 
 import json
-import os
+from pathlib import Path
 
-P = (
-    os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".")
-    + os.path.sep
-)
+P = Path(__file__).resolve().parent
 
 # 打开songlist
-with open(os.path.join(P + "songlist"), "rb") as f:
+with open(P / "songlist", "rb") as f:
     s = json.load(f)
 
 # 提取数据
-l = []
-for element in s["songs"]:
-    title = element["title_localized"]["en"]
-    l.append(title)
+l = [song["title_localized"]["en"] for song in s["songs"]]
 
 # 写入曲库
-with open(os.path.join(P + "dict"), "w", encoding="utf-8") as output:
+with open(P / "dict", "w", encoding="utf-8") as output:
     for line in l:
         output.write(line + "\n")
