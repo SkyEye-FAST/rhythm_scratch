@@ -52,6 +52,14 @@
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "",
                     "rating": 7
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "Luxance + Exschwasion",
+                    "jacketDesigner": "",
+                    "rating": 8,
+                    "date": 1709856000,
+                    "version": "5.4"
                 }
             ]
         },
@@ -242,7 +250,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "Khronetic",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -297,7 +306,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -589,7 +599,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "Frums",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -738,10 +749,10 @@
             "audioPreview": 33882,
             "audioPreviewEnd": 68470,
             "side": 0,
-            "world_unlock": true,
+            "world_unlock": false,
             "bg": "base_light",
             "bg_inverse": "base_conflict",
-            "remote_dl": true,
+            "remote_dl": false,
             "date": 1487980806,
             "version": "1.0",
             "difficulties": [
@@ -835,7 +846,7 @@
                     "chartDesigner": "石樂",
                     "jacketDesigner": "Koyama Mai",
                     "jacketOverride": true,
-                    "rating": 8,
+                    "rating": 9,
                     "date": 1590537600,
                     "version": "3.0"
                 }
@@ -966,7 +977,8 @@
                     "jacketOverride": true,
                     "ratingPlus": true,
                     "date": 1639008001,
-                    "version": "3.10"
+                    "version": "3.10",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -1037,7 +1049,8 @@
                     "bg": "pragmatism3",
                     "rating": 11,
                     "date": 1639008004,
-                    "version": "3.10"
+                    "version": "3.10",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -1094,7 +1107,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪",
                     "jacketDesigner": "シエラ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -1220,7 +1234,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -1410,7 +1425,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "Tagtraume",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -1471,7 +1487,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Party Toaster",
                     "jacketDesigner": "アサヤ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -1541,7 +1558,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "yoshimo",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -1712,7 +1730,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "ましろみ のあ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -1768,7 +1787,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro 2.0",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -2005,7 +2025,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Kurorak",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -2142,7 +2163,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Kurorak",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -2268,7 +2290,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "k//eternal",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -2463,7 +2486,17 @@
                     "ratingClass": 2,
                     "chartDesigner": "小東星",
                     "jacketDesigner": "yoshimo",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "eién",
+                    "jacketDesigner": "yoshimo",
+                    "rating": 8,
+                    "ratingPlus": true,
+                    "date": 1709856001,
+                    "version": "5.4"
                 }
             ]
         },
@@ -2720,7 +2753,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Kurorak",
                     "jacketDesigner": "橙乃遥",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -3614,7 +3648,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "side BLUE -chartaesthesia-",
                     "jacketDesigner": "Khronetic",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -3756,7 +3791,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "softmode",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -3868,7 +3904,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -3936,7 +3973,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "k//eternal",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -3998,7 +4036,7 @@
                     "ratingClass": 2,
                     "chartDesigner": "Kurorak",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 9
                 }
             ]
         },
@@ -4337,7 +4375,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "東星",
                     "jacketDesigner": "シエラ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -4537,7 +4576,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "mins",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -4718,7 +4758,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "τoastεr",
                     "jacketDesigner": "姐川 + Khronetic",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -4775,7 +4815,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "週刊Toaster",
                     "jacketDesigner": "未早",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -4896,6 +4937,16 @@
                     "chartDesigner": "Kero + Nitro",
                     "jacketDesigner": "mirimo",
                     "rating": 9
+                },
+                {
+                    "ratingClass": 3,
+                    "chartDesigner": "antymis",
+                    "jacketDesigner": "mirimo",
+                    "jacketOverride": true,
+                    "rating": 9,
+                    "ratingPlus": true,
+                    "date": 1706140801,
+                    "version": "5.3"
                 }
             ]
         },
@@ -4951,7 +5002,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Kuro my Nitro",
                     "jacketDesigner": "DJ Poyoshi",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -5006,7 +5058,17 @@
                     "ratingClass": 2,
                     "chartDesigner": "Kurorak",
                     "jacketDesigner": "Ancy",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 3,
+                    "chartDesigner": "CERiNG",
+                    "jacketDesigner": "Ancy",
+                    "jacketOverride": true,
+                    "rating": 9,
+                    "date": 1706140800,
+                    "version": "5.3"
                 }
             ]
         },
@@ -5070,7 +5132,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "小東星",
                     "jacketDesigner": "アリスシャッハと魔法の楽団",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -5413,7 +5476,17 @@
                     "ratingClass": 2,
                     "chartDesigner": "Toastie",
                     "jacketDesigner": "雨風雪夏",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "CERiNG",
+                    "jacketDesigner": "雨風雪夏",
+                    "rating": 8,
+                    "ratingPlus": true,
+                    "date": 1709856002,
+                    "version": "5.4"
                 }
             ]
         },
@@ -5603,7 +5676,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "-chartaesthesia-\nLIMITER:25% (OVERDRIVE:+100%)",
                     "jacketDesigner": "Hanamori Hiro",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -6169,7 +6243,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪[Spherical]",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -6529,7 +6604,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Got More Taro?",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -6866,6 +6942,15 @@
                     "chartDesigner": "Kurorak + Nitro",
                     "jacketDesigner": "wacca",
                     "rating": 9
+                },
+                {
+                    "ratingClass": 3,
+                    "chartDesigner": "Exschwasion -unbound-",
+                    "jacketDesigner": "wacca",
+                    "jacketOverride": true,
+                    "rating": 10,
+                    "date": 1706140803,
+                    "version": "5.3"
                 }
             ]
         },
@@ -6930,7 +7015,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "",
                     "jacketDesigner": "シエラ",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -6988,7 +7074,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "chaos//engine",
                     "jacketDesigner": "釜飯轟々丸 + Khronetic",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -6997,7 +7084,8 @@
                     "jacketOverride": true,
                     "rating": 9,
                     "date": 1639008002,
-                    "version": "3.10"
+                    "version": "3.10",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -7177,6 +7265,24 @@
                     "chartDesigner": "Nitro vanquish Toaster.",
                     "jacketDesigner": "吠L",
                     "rating": 10
+                },
+                {
+                    "ratingClass": 3,
+                    "title_localized": {
+                        "en": "Vicious [ANTi] Heroism"
+                    },
+                    "artist": "Kobaryo",
+                    "bpm": "271",
+                    "bpm_base": 271,
+                    "audioOverride": true,
+                    "chartDesigner": "[FUTiLE] Defiance",
+                    "jacketDesigner": "陽葉ヨウ",
+                    "jacketOverride": true,
+                    "bg": "viciousheroism3",
+                    "rating": 11,
+                    "date": 1706140806,
+                    "version": "5.3",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -7287,7 +7393,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Revoke Kurorak",
                     "jacketDesigner": "出前",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -7329,8 +7435,8 @@
             "side": 0,
             "bg": "rei",
             "bg_inverse": "yugamu",
-            "remote_dl": true,
-            "world_unlock": true,
+            "remote_dl": false,
+            "world_unlock": false,
             "date": 1553126400,
             "version": "2.0",
             "difficulties": [
@@ -7350,7 +7456,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -7845,7 +7952,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "小東星",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -7971,7 +8079,8 @@
                     "rating": 10,
                     "ratingPlus": true,
                     "date": 1639008003,
-                    "version": "3.10"
+                    "version": "3.10",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -8089,7 +8198,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "TaroNuke",
                     "jacketDesigner": "Refla",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -8657,7 +8767,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "N↕TRO",
                     "jacketDesigner": "GreeN",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -8782,7 +8893,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "k//eternal",
                     "jacketDesigner": "未早",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -8833,7 +8945,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "Hanamori Hiro",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -9091,6 +9204,17 @@
                     "jacketDesigner": "すずなし",
                     "rating": 9,
                     "ratingPlus": true
+                },
+                {
+                    "ratingClass": 3,
+                    "chartDesigner": "~REQUIEM~ 夜浪",
+                    "jacketDesigner": "すずなし",
+                    "jacketOverride": true,
+                    "rating": 10,
+                    "ratingPlus": true,
+                    "date": 1706140805,
+                    "version": "5.3",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -9317,7 +9441,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "現在の縁",
                     "jacketDesigner": "Sta",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -9383,6 +9508,16 @@
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "クルエルGZ",
                     "rating": 8
+                },
+                {
+                    "ratingClass": 3,
+                    "chartDesigner": "Nitro 「The Forgotten」",
+                    "jacketDesigner": "クルエルGZ",
+                    "jacketOverride": true,
+                    "rating": 9,
+                    "ratingPlus": true,
+                    "date": 1706140802,
+                    "version": "5.3"
                 }
             ]
         },
@@ -9493,7 +9628,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪「月食」",
                     "jacketDesigner": "softmode",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -9609,7 +9745,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "リウイチ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -9669,7 +9806,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Darkest Dream",
                     "jacketDesigner": "シエラ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -9832,7 +9970,7 @@
                     "ratingClass": 0,
                     "chartDesigner": "Prelude - Ouverture",
                     "jacketDesigner": "シエラ",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 1,
@@ -9909,6 +10047,7 @@
                     "chartDesigner": "∅",
                     "jacketDesigner": "シエラ",
                     "rating": 7,
+                    "ratingPlus": true,
                     "hidden_until_unlocked": true,
                     "hidden_until": "difficulty"
                 },
@@ -10040,7 +10179,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "mokeo",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -10215,7 +10355,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "TaroNuke",
                     "jacketDesigner": "Mechari",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -10457,7 +10598,7 @@
             "title_localized": {
                 "en": "Teriqma"
             },
-            "artist": "owl*tree",
+            "artist": "owl＊tree",
             "search_title": {
                 "ja": [
                     "てりくま"
@@ -10685,7 +10826,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "×NITRO×",
                     "jacketDesigner": "nonokuro",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -11177,6 +11319,16 @@
                     "chartDesigner": "Exschwasion",
                     "jacketDesigner": "HakureiNeko",
                     "rating": 9
+                },
+                {
+                    "ratingClass": 3,
+                    "chartDesigner": "\/ERROR\/ 絶滅",
+                    "jacketDesigner": "HakureiNeko",
+                    "jacketOverride": true,
+                    "rating": 10,
+                    "date": 1706140804,
+                    "version": "5.3",
+                    "hidden_until": "difficulty"
                 }
             ]
         },
@@ -11531,7 +11683,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "にもし",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -11841,7 +11994,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "東星の涙",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -11913,7 +12067,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "τ0",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -12047,7 +12202,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "石樂",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -12172,7 +12328,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "AMAZING TOASTYYYY!!!!",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -12234,7 +12391,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitro -EXTRA ROUND-",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -12484,7 +12642,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster affected by 'CHUNITHM'",
                     "jacketDesigner": "Enji",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -12787,7 +12945,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "",
-                    "rating": 5
+                    "rating": 6
                 },
                 {
                     "ratingClass": 2,
@@ -12851,7 +13009,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "桶乃かもく",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -12971,7 +13130,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "梅まろ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -13161,7 +13321,7 @@
                     "ratingClass": 2,
                     "chartDesigner": "Exschwasion",
                     "jacketDesigner": "水視ずみ",
-                    "rating": 8
+                    "rating": 9
                 }
             ]
         },
@@ -13216,7 +13376,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "ΤΟΑΣΤΕΡ",
                     "jacketDesigner": "SHIROTA.",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -13335,7 +13496,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Kurorak",
                     "jacketDesigner": "Asagon.",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -13394,7 +13555,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "志月",
-                    "rating": 5
+                    "rating": 6
                 },
                 {
                     "ratingClass": 2,
@@ -13518,7 +13679,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪 vs Nitro",
                     "jacketDesigner": "Nagu + yusi.",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -13642,7 +13804,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "NITRO -unconnected-",
                     "jacketDesigner": "fixro2n",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -13888,7 +14050,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "東星※神授",
                     "jacketDesigner": "緋原ヨウ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -13951,7 +14114,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Exschwasion",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -14012,13 +14176,14 @@
                     "ratingClass": 1,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "",
-                    "rating": 5
+                    "rating": 6
                 },
                 {
                     "ratingClass": 2,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 3,
@@ -14150,7 +14315,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "Taiyo Yamamoto",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -14519,7 +14685,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "_ P R E S E N T",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -14765,7 +14931,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro missing Toaster.",
                     "jacketDesigner": "シエラ",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -15021,7 +15188,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "ヒトこもる",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -15072,7 +15240,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "チェリム",
-                    "rating": 5
+                    "rating": 6
                 },
                 {
                     "ratingClass": 2,
@@ -15200,7 +15368,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitro × Toaster",
                     "jacketDesigner": "久坂んむり",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -15258,7 +15427,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "東星",
                     "jacketDesigner": "シエラ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -15321,13 +15491,14 @@
                     "ratingClass": 1,
                     "chartDesigner": "antymis",
                     "jacketDesigner": "",
-                    "rating": 5
+                    "rating": 6
                 },
                 {
                     "ratingClass": 2,
                     "chartDesigner": "antymis",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -15692,7 +15863,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "én",
                     "jacketDesigner": "",
-                    "rating": 5
+                    "rating": 6
                 },
                 {
                     "ratingClass": 2,
@@ -15749,7 +15920,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "moonquay [AUX]",
                     "jacketDesigner": "",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -15807,7 +15978,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Exschwas↕on",
                     "jacketDesigner": "装甲枕",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -15926,7 +16098,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "NITRO",
                     "jacketDesigner": "Siino",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -16059,7 +16232,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -16308,7 +16481,7 @@
                     "chartDesigner": "antymis <prototype>",
                     "jacketDesigner": "",
                     "jacketOverride": true,
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -16795,7 +16968,8 @@
                     "ratingClass": 1,
                     "jacketDesigner": "Khronetic",
                     "chartDesigner": "CERiNG + Nitro",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -16853,7 +17027,8 @@
                     "ratingClass": 1,
                     "jacketDesigner": "yoshimo",
                     "chartDesigner": "én -胡蝶の夢-",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -17051,7 +17226,8 @@
                     "ratingClass": 1,
                     "jacketDesigner": "米室",
                     "chartDesigner": "Imaginary Sky",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -17117,13 +17293,14 @@
                     "ratingClass": 0,
                     "jacketDesigner": "村カルキ",
                     "chartDesigner": "Paradox Blight",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 1,
                     "jacketDesigner": "村カルキ",
                     "chartDesigner": "Paradox Blight",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -17197,7 +17374,8 @@
                     "ratingClass": 1,
                     "jacketDesigner": "シエラ",
                     "chartDesigner": "Eye of the Storm",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -17268,6 +17446,7 @@
                     "jacketDesigner": "シエラ",
                     "chartDesigner": "Eternal¦PAST",
                     "rating": 7,
+                    "ratingPlus": true,
                     "hidden_until": "song"
                 },
                 {
@@ -18019,7 +18198,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "wacca",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -18076,7 +18255,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "0°Nitro",
                     "jacketDesigner": "シエラ",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -18142,7 +18322,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitroです。",
                     "jacketDesigner": "七草くりむ",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -18207,7 +18388,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Lovely Visitor「Toaster」",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -18261,7 +18443,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "ANTyMIS",
                     "jacketDesigner": "N²/ANTIREAL",
-                    "rating": 5
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -18377,7 +18559,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Aster",
                     "jacketDesigner": "八重幸",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -18435,7 +18618,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪 -Annales Historiae-",
                     "jacketDesigner": "fixro2n",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -18492,7 +18676,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪",
                     "jacketDesigner": "softmode",
-                    "rating": 7
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -18608,7 +18793,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "NITR<O>",
                     "jacketDesigner": "トロ３",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -18811,7 +18997,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "N-Helix",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -18930,7 +19117,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -19049,7 +19237,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "東星※原初の灯",
                     "jacketDesigner": "Waterswing",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -19120,7 +19309,8 @@
                     "ratingClass": 2,
                     "chartDesigner": "Nitro NEW!!",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -19180,7 +19370,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "ÉN IMPACT",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -19394,7 +19585,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "夜浪 <->",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -19763,7 +19955,7 @@
                     "ratingClass": 2,
                     "chartDesigner": "Luxance",
                     "jacketDesigner": "",
-                    "rating": 8
+                    "rating": 9
                 }
             ]
         },
@@ -19880,7 +20072,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Exschwasion",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -19942,7 +20135,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitroだー！",
                     "jacketDesigner": "Bison",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20005,7 +20199,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "該当チャンネルが停止されたため、\nこの譜面は再生できません。",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20130,7 +20325,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "₸öα$†ε₹",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20194,7 +20390,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster vs ₸öα$†ε₹",
                     "jacketDesigner": "NC帝國",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20325,7 +20522,7 @@
                     "ratingClass": 0,
                     "chartDesigner": "Luxance",
                     "jacketDesigner": "",
-                    "rating": 3
+                    "rating": 4
                 },
                 {
                     "ratingClass": 1,
@@ -20588,7 +20785,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "終点",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20657,6 +20855,7 @@
                     "chartDesigner": "Main_Log_702_10_25",
                     "jacketDesigner": "",
                     "rating": 8,
+                    "ratingPlus": true,
                     "jacketOverride": true
                 },
                 {
@@ -20720,7 +20919,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Lacrimosa",
                     "jacketDesigner": "",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20839,7 +21039,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "NO₂",
                     "jacketDesigner": "いわこ脳",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -20904,13 +21105,15 @@
                     "ratingClass": 1,
                     "chartDesigner": "én",
                     "jacketDesigner": "子期安NANA_ANN",
-                    "rating": 6
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
                     "chartDesigner": "én",
                     "jacketDesigner": "子期安NANA_ANN",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 }
             ]
         },
@@ -20962,7 +21165,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Exschwasion",
                     "jacketDesigner": "めとこ",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -21026,7 +21229,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "N⇑TRO",
                     "jacketDesigner": "Asgard",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -21086,7 +21289,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Toaster",
                     "jacketDesigner": "ひと和",
-                    "rating": 7
+                    "rating": 8
                 },
                 {
                     "ratingClass": 2,
@@ -21151,7 +21354,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "Remnant ⇒ Doubt",
                     "jacketDesigner": "おぐち",
-                    "rating": 8
+                    "rating": 8,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -21280,7 +21484,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "",
                     "jacketDesigner": "Bison",
-                    "rating": 7,
+                    "rating": 8,
                     "jacketOverride": true
                 },
                 {
@@ -21319,7 +21523,7 @@
             "bpm_base": 130,
             "set": "base",
             "purchase": "",
-            "audioPreview": 27962,
+            "audioPreview": 27692,
             "audioPreviewEnd": 64615,
             "side": 0,
             "bg": "hime_light",
@@ -21339,7 +21543,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Nitro",
                     "jacketDesigner": "",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -21401,7 +21605,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "Exschwasión",
                     "jacketDesigner": "AT基調",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -21589,7 +21793,7 @@
                     "ratingClass": 1,
                     "chartDesigner": "CERiNG",
                     "jacketDesigner": "LOWRISE",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 2,
@@ -21709,7 +21913,8 @@
                     "ratingClass": 1,
                     "chartDesigner": "絶滅",
                     "jacketDesigner": "majamari",
-                    "rating": 7
+                    "rating": 7,
+                    "ratingPlus": true
                 },
                 {
                     "ratingClass": 2,
@@ -21825,7 +22030,7 @@
                     "ratingClass": 0,
                     "chartDesigner": "第一識 \"Reality\"",
                     "jacketDesigner": "すずなし",
-                    "rating": 6
+                    "rating": 7
                 },
                 {
                     "ratingClass": 1,
@@ -21844,6 +22049,2010 @@
                 {"file_name": "video_720.mp4", "requirement": "low_res"},
                 {"file_name": "video_1080.mp4", "requirement": "hi_res"}
             ]
+        },
+        {
+            "idx": 353,
+            "id": "fantasy",
+            "title_localized": {
+                "en": "FANTA5Y"
+            },
+            "artist": "Moon Jelly & YUKIYANAGI",
+            "search_title": {
+                "en": [
+                    "fantasy"
+                ],
+                "ja": [
+                    "ふぁんたじー"
+                ],
+                "ko": [
+                    "판타지"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "むーんじぇりー",
+                    "ゆきやなぎ"
+                ],
+                "ko": [
+                    "문 젤리",
+                    "유키야나기"
+                ]
+            },
+            "bpm": "170",
+            "bpm_base": 170,
+            "set": "extend_2",
+            "purchase": "extend_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "hime_light",
+            "bg_inverse": "hime_conflict",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1698278400,
+            "version": "5.1",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "TOA5TIE",
+                    "jacketDesigner": "nep",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "TOA5TIE",
+                    "jacketDesigner": "nep",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "TOA5TIE",
+                    "jacketDesigner": "nep",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 354,
+            "id": "transientspace",
+            "title_localized": {
+                "en": "Transient Space"
+            },
+            "artist": "sleepless, Gardens, aspect",
+            "search_title": {
+                "ja": [
+                    "とらんしえんとすぺーす"
+                ],
+                "ko": [
+                    "트랜시언트 스페이스",
+                    "트랜지언트 스페이스"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "すりーぷれす",
+                    "がーでんず",
+                    "あすぺくと"
+                ],
+                "ko": [
+                    "슬립리스",
+                    "가든즈",
+                    "가든스",
+                    "에스펙트",
+                    "어스펙트"
+                ]
+            },
+            "bpm": "115-132",
+            "bpm_base": 132,
+            "set": "eden_append_2",
+            "purchase": "eden_append_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "eden_append_conflict",
+            "bg_inverse": "eden_append_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1698278401,
+            "version": "5.1",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "CERiNG -liminal-",
+                    "jacketDesigner": "PAZZi",
+                    "rating": 2
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "CERiNG -liminal-",
+                    "jacketDesigner": "PAZZi",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "CERiNG -liminal-",
+                    "jacketDesigner": "PAZZi",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 355,
+            "id": "namelesspassion",
+            "title_localized": {
+                "en": "Nameless Passion"
+            },
+            "artist": "天束 feat.Sennzai",
+            "search_title": {
+                "ja": [
+                    "ねーむれすぱっしょん"
+                ],
+                "ko": [
+                    "네임리스 패션"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "amatsuka"
+                ],
+                "ja": [
+                    "あまつか",
+                    "せんざい"
+                ],
+                "ko": [
+                    "아마츠카",
+                    "센자이"
+                ]
+            },
+            "bpm": "200",
+            "bpm_base": 200,
+            "set": "eden_append_2",
+            "purchase": "eden_append_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "eden_append_conflict",
+            "bg_inverse": "eden_append_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1698278402,
+            "version": "5.1",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Luxance",
+                    "jacketDesigner": "こたろう",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Luxance",
+                    "jacketDesigner": "こたろう",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Luxance",
+                    "jacketDesigner": "こたろう",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 356,
+            "id": "teravolt",
+            "title_localized": {
+                "en": "TeraVolt"
+            },
+            "artist": "Katali",
+            "search_title": {
+                "ja": [
+                    "てらぼると"
+                ],
+                "ko": [
+                    "테라볼트"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "かたり"
+                ],
+                "ko": [
+                    "카타리"
+                ]
+            },
+            "bpm": "154",
+            "bpm_base": 154,
+            "set": "eden_append_2",
+            "purchase": "eden_append_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "eden_append_conflict",
+            "bg_inverse": "eden_append_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1698278403,
+            "version": "5.1",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "夜浪",
+                    "jacketDesigner": "hiro",
+                    "rating": 5
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "夜浪",
+                    "jacketDesigner": "hiro",
+                    "rating": 8,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "超東星 × 雷夜浪",
+                    "jacketDesigner": "hiro",
+                    "rating": 10,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 357,
+            "id": "stratoliner",
+            "title_localized": {
+                "en": "Stratoliner"
+            },
+            "artist": "C-Show",
+            "search_title": {
+                "ja": [
+                    "すとらとらいなー"
+                ],
+                "ko": [
+                    "스트라토라이너"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "ししょう"
+                ],
+                "ko": [
+                    "시쇼"
+                ]
+            },
+            "bpm": "175",
+            "bpm_base": 175,
+            "set": "wacca_append_1",
+            "purchase": "wacca_append_1",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "wacca_conflict",
+            "bg_inverse": "wacca_light",
+            "remote_dl": true,
+            "source_copyright": "©Marvelous Inc. / Supported by HARDCORE TANO*C",
+            "world_unlock": false,
+            "date": 1701302400,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Exschwasion",
+                    "jacketDesigner": "",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Exschwasion",
+                    "jacketDesigner": "",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Exschwasion",
+                    "jacketDesigner": "",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 358,
+            "id": "ouverture",
+            "title_localized": {
+                "en": "Ouvertüre"
+            },
+            "artist": "USAO & DJ Genki feat. ルーン(CV:河瀬茉希)",
+            "search_title": {
+                "en": [
+                    "Ouverture"
+                ],
+                "ja": [
+                    "おばーちゅあ"
+                ],
+                "ko": [
+                    "오버쳐"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "luin",
+                    "maki kawase"
+                ],
+                "ja": [
+                    "うさお",
+                    "でぃーじぇーげんき",
+                    "でぃーじぇいげんき",
+                    "かわせまき"
+                ],
+                "ko": [
+                    "우사오",
+                    "디제이 겐키",
+                    "룬",
+                    "카와세 마키"
+                ]
+            },
+            "bpm": "200",
+            "bpm_base": 200,
+            "set": "wacca_append_1",
+            "purchase": "wacca_append_1",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "wacca_conflict",
+            "bg_inverse": "wacca_light",
+            "remote_dl": true,
+            "source_copyright": "©Marvelous Inc. / Supported by HARDCORE TANO*C",
+            "world_unlock": false,
+            "date": 1701302401,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "るくあんす",
+                    "jacketDesigner": "",
+                    "rating": 2
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "るくあんす",
+                    "jacketDesigner": "",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "るくあんす",
+                    "jacketDesigner": "",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 359,
+            "id": "xtreme",
+            "title_localized": {
+                "en": "XTREME"
+            },
+            "artist": "USAO",
+            "search_title": {
+                "ja": [
+                    "えくすとりーむ"
+                ],
+                "ko": [
+                    "익스트림",
+                    "엑스트림"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "うさお"
+                ],
+                "ko": [
+                    "우사오"
+                ]
+            },
+            "bpm": "205",
+            "bpm_base": 205,
+            "set": "wacca_append_1",
+            "purchase": "wacca_append_1",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "wacca_conflict",
+            "bg_inverse": "wacca_light",
+            "remote_dl": true,
+            "source_copyright": "©Marvelous Inc. / Supported by HARDCORE TANO*C",
+            "world_unlock": false,
+            "date": 1701302402,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "絶滅",
+                    "jacketDesigner": "",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "絶滅",
+                    "jacketDesigner": "",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "絶滅",
+                    "jacketDesigner": "",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 360,
+            "id": "edenwacca",
+            "title_localized": {
+                "en": "eden"
+            },
+            "artist": "\"漆黒\"の堕天使《Gram》†Versus†\"聖刻\"の熾天使《Gram》",
+            "search_title": {
+                "ja": [
+                    "えでん"
+                ],
+                "ko": [
+                    "에덴"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "shikkoku no datenshi",
+                    "seikoku no shitenshi"
+                ],
+                "ja": [
+                    "しっこくのだてんしぐらむ",
+                    "せいこくのしてんしぐらむ"
+                ],
+                "ko": [
+                    "싯코쿠노 다텐시 그라무",
+                    "세이코쿠노 시텐시 그라무",
+                    "칠흑의 타천사 그람",
+                    "성각의 치천사 그람",
+                    "칠흑의 타천사 그램",
+                    "성각의 치천사 그램"
+                ]
+            },
+            "bpm": "246",
+            "bpm_base": 246,
+            "set": "wacca_append_1",
+            "purchase": "wacca_append_1",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "wacca_conflict",
+            "bg_inverse": "wacca_light",
+            "remote_dl": true,
+            "source_copyright": "©Marvelous Inc. / Supported by HARDCORE TANO*C",
+            "world_unlock": false,
+            "date": 1701302403,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "反水",
+                    "jacketDesigner": "",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "反水",
+                    "jacketDesigner": "",
+                    "rating": 8
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "反水",
+                    "jacketDesigner": "",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 361,
+            "id": "metamysteria",
+            "title_localized": {
+                "en": "Meta-Mysteria"
+            },
+            "artist": "DJ Noriken",
+            "search_title": {
+                "ja": [
+                    "めたみすてりあ"
+                ],
+                "ko": [
+                    "메타 미스테리아"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "でぃーじぇーのりけん",
+                    "でぃーじぇいのりけん"
+                ],
+                "ko": [
+                    "디제이 노리켄"
+                ]
+            },
+            "bpm": "205",
+            "bpm_base": 205,
+            "set": "wacca_append_1",
+            "purchase": "wacca_append_1",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "meta_mysteria",
+            "bg_inverse": "meta_mysteria",
+            "remote_dl": true,
+            "source_copyright": "©Marvelous Inc. / Supported by HARDCORE TANO*C",
+            "world_unlock": false,
+            "date": 1701302404,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "夜浪",
+                    "jacketDesigner": "Taiyo Yamamoto",
+                    "rating": 5
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "夜浪",
+                    "jacketDesigner": "Taiyo Yamamoto",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "VII: THE CHARIOT/夜浪",
+                    "jacketDesigner": "Taiyo Yamamoto",
+                    "rating": 10,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 362,
+            "id": "aloneandlorn",
+            "title_localized": {
+                "en": "Alone & Lorn",
+                "ja": "アローンアンドローン"
+            },
+            "artist": "Ponchi♪ feat.はぁち",
+            "search_title": {
+                "ko": [
+                    "얼론 앤 론",
+                    "얼론 앤드 론"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "haachi",
+                    "haxchi"
+                ],
+                "ja": [
+                    "ぽんち"
+                ],
+                "ko": [
+                    "폰치",
+                    "하아치"
+                ]
+            },
+            "bpm": "100",
+            "bpm_base": 200,
+            "set": "extend_2",
+            "purchase": "extend_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "eden_light",
+            "bg_inverse": "eden_conflict",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1701302405,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "én",
+                    "jacketDesigner": "のり恋",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "én",
+                    "jacketDesigner": "のり恋",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "én & KLMNOP",
+                    "jacketDesigner": "のり恋",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 363,
+            "id": "wishuponasnow",
+            "title_localized": {
+                "en": "Wish Upon a Snow"
+            },
+            "artist": "打打だいず",
+            "search_title": {
+                "ja": [
+                    "うぃっしゅあぽんあすのー",
+                    "うぃっしゅあぽんあすのう"
+                ],
+                "ko": [
+                    "위시 어폰 어 스노우"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "dadadaizu",
+                    "dddice"
+                ],
+                "ja": [
+                    "だだだいず"
+                ],
+                "ko": [
+                    "다다다이즈"
+                ]
+            },
+            "bpm": "218",
+            "bpm_base": 218,
+            "set": "single",
+            "purchase": "wishuponasnow",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "eden_light",
+            "bg_inverse": "eden_conflict",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1701302406,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "0°絶滅",
+                    "jacketDesigner": "桶乃かもく",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "0°絶滅",
+                    "jacketDesigner": "桶乃かもく",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "0°絶滅",
+                    "jacketDesigner": "桶乃かもく",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 364,
+            "id": "overdrive",
+            "title_localized": {
+                "en": "Kanbu de Tomatte Sugu Tokeru",
+                "ja": "患部で止まってすぐ溶ける　〜 狂気の優曇華院"
+            },
+            "artist": "ARM＋夕野ヨシミ (IOSYS) feat. miko",
+            "search_title": {
+                "en": [
+                    "kyouki no udongein"
+                ],
+                "ja": [
+                    "かんぶでとまってすぐとけるきょうきのうどんげいん"
+                ],
+                "ko": [
+                    "칸부데 토맛테 스구 토케루 쿄우키노 우동게인",
+                    "환부에서 멈춰서 바로 녹는다 광기의 우동게인"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "yuuno yoshimi"
+                ],
+                "ja": [
+                    "あーむ",
+                    "ゆうのよしみ",
+                    "みこ",
+                    "いおしす"
+                ],
+                "ko": [
+                    "이오시스",
+                    "암",
+                    "미코",
+                    "유우노 요시미"
+                ]
+            },
+            "bpm": "200",
+            "bpm_base": 200,
+            "set": "single",
+            "purchase": "overdrive",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "touhou_light",
+            "bg_inverse": "touhou_conflict",
+            "source_copyright": "©上海アリス幻樂団",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1703116800,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "C7H11NO配合!!!!!!",
+                    "jacketDesigner": "モタ",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "C7H11NO配合!!!!!!",
+                    "jacketDesigner": "モタ",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "C7H11NO配合!!!!!!",
+                    "jacketDesigner": "モタ",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 365,
+            "id": "felys",
+            "title_localized": {
+                "en": "felys final remix"
+            },
+            "artist": "onoken",
+            "search_title": {
+                "ja": [
+                    "ふぇりすふぁいなるりみっくす"
+                ],
+                "ko": [
+                    "펠리스 파이널 리믹스"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "おのけん"
+                ],
+                "ko": [
+                    "오노켄"
+                ]
+            },
+            "bpm": "180",
+            "bpm_base": 180,
+            "set": "extend_2",
+            "purchase": "extend_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "prelude_conflict",
+            "bg_inverse": "prelude_light",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1703116801,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Dec18",
+                    "jacketDesigner": "Ta-k",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Dec18",
+                    "jacketDesigner": "Ta-k",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Dec18",
+                    "jacketDesigner": "Ta-k",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 366,
+            "id": "onandon",
+            "title_localized": {
+                "en": "On And On!! feat. Jenga"
+            },
+            "artist": "ETIA.",
+            "search_title": {
+                "ja": [
+                    "おんあんどおん"
+                ],
+                "ko": [
+                    "온 앤 온"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "えちあ",
+                    "じぇんが"
+                ],
+                "ko": [
+                    "에치아",
+                    "젠가"
+                ]
+            },
+            "bpm": "170",
+            "bpm_base": 170,
+            "set": "extend_2",
+            "purchase": "extend_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "nijuusei2_light",
+            "bg_inverse": "nijuusei2_conflict",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1703116802,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "én and én!!",
+                    "jacketDesigner": "Keizou",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "én and én!!",
+                    "jacketDesigner": "Keizou",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "én and én!!",
+                    "jacketDesigner": "Keizou",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 367,
+            "id": "lightmyway",
+            "title_localized": {
+                "en": "LIVHT MY WΔY"
+            },
+            "artist": "かめりあ feat. STΔRLIVHT",
+            "search_title": {
+                "en": [
+                    "light my way"
+                ],
+                "ja": [
+                    "らいとまいうぇい"
+                ],
+                "ko": [
+                    "라이트 마이 웨이",
+                    "라잇 마이 웨이"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "kameria",
+                    "camellia",
+                    "starlight"
+                ],
+                "ja": [
+                    "すたーらいと"
+                ],
+                "ko": [
+                    "카메리아",
+                    "카멜리아",
+                    "스타라이트"
+                ]
+            },
+            "bpm": "190",
+            "bpm_base": 190,
+            "set": "single",
+            "purchase": "lightmyway",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "single2_conflict",
+            "bg_inverse": "single2_light",
+            "remote_dl": true,
+            "source_localized": {
+                "en": "NOISZ STARLIVHT"
+            },
+            "source_copyright": "©Anarch Ent. 2022",
+            "world_unlock": false,
+            "date": 1703116802,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "k//eternal + nitro\n\"ephemeral past\"",
+                    "jacketDesigner": "fruitsrabbit",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "k//eternal + nitro\n\"recursive present\"",
+                    "jacketDesigner": "fruitsrabbit",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "k//eternal + nitro\n\"convergent future\"",
+                    "jacketDesigner": "fruitsrabbit",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 368,
+            "id": "hotarubinoyuki",
+            "title_localized": {
+                "en": "Hotarubi no Yuki",
+                "ja": "蛍火の雪"
+            },
+            "artist": "Endorfin.",
+            "search_title": {
+                "ja": [
+                    "ほたるびのゆき"
+                ],
+                "ko": [
+                    "호타루비노 유키",
+                    "반딧불의 눈"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "えんどるふぃん"
+                ],
+                "ko": [
+                    "엔돌핀",
+                    "엔도르핀"
+                ]
+            },
+            "bpm": "159",
+            "bpm_base": 159,
+            "set": "omatsuri",
+            "purchase": "omatsuri",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "omatsuri_light",
+            "bg_inverse": "omatsuri_conflict",
+            "bg_daynight": {
+                "day": "omatsuri_light",
+                "night": "omatsuri_conflict"
+            },
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1705017600,
+            "version": "5.2",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "0°Nitro",
+                    "jacketDesigner": "Bison",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "0°Nitro",
+                    "jacketDesigner": "Bison",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "0°Nitro",
+                    "jacketDesigner": "Bison",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 369,
+            "id": "theformula",
+            "title_localized": {
+                "en": "The Formula"
+            },
+            "artist": "Junk",
+            "search_title": {
+                "ja": [
+                    "ざふぉーみゅら"
+                ],
+                "ko": [
+                    "더 포뮬라"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "じゃんく"
+                ],
+                "ko": [
+                    "정크"
+                ]
+            },
+            "bpm": "144",
+            "bpm_base": 144,
+            "set": "base",
+            "purchase": "",
+            "audioPreview": 98333,
+            "audioPreviewEnd": 125000,
+            "side": 0,
+            "bg": "nijuusei2_light",
+            "bg_inverse": "nijuusei2_conflict",
+            "remote_dl": false,
+            "world_unlock": false,
+            "date": 1706140807,
+            "version": "5.3",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Dec18",
+                    "jacketDesigner": "鑓田 (alpha complex)",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Dec18",
+                    "jacketDesigner": "鑓田 (alpha complex)",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Dec18",
+                    "jacketDesigner": "鑓田 (alpha complex)",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 370,
+            "id": "lunarossa",
+            "title_localized": {
+                "en": "Luna Rossa"
+            },
+            "artist": "r0y",
+            "bpm": "174",
+            "bpm_base": 174,
+            "set": "single",
+            "purchase": "lunarossa",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "yugamu",
+            "bg_inverse": "rei",
+            "remote_dl": true,
+            "source_localized": {
+                "en": "Shinobi Slash",
+                "ja": "シノビスラッシュ"
+            },
+            "search_title": {
+                "ja": [
+                    "るなろっさ"
+                ],
+                "ko": [
+                    "루나 로사",
+                    "루나 롯사"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "ろい"
+                ],
+                "ko": [
+                    "로이"
+                ]
+            },
+            "source_copyright": "©Drossel\/Studio",
+            "world_unlock": false,
+            "date": 1706140808,
+            "version": "5.3",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Luxance",
+                    "jacketDesigner": "未早",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Luxance",
+                    "jacketDesigner": "未早",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Luxance",
+                    "jacketDesigner": "未早",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 371,
+            "id": "jingle",
+            "title_localized": {
+                "en": "Jingle"
+            },
+            "artist": "DJ Noriken",
+            "search_title": {
+                "ja": [
+                    "じんぐる"
+                ],
+                "ko": [
+                    "징글"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "でぃーじぇーのりけん",
+                    "でぃーじぇいのりけん"
+                ],
+                "ko": [
+                    "디제이 노리켄"
+                ]
+            },
+            "bpm": "170",
+            "bpm_base": 170,
+            "set": "base",
+            "purchase": "",
+            "audioPreview": 48705,
+            "audioPreviewEnd": 74823,
+            "side": 0,
+            "bg": "single2_light",
+            "bg_inverse": "single2_conflict",
+            "remote_dl": false,
+            "world_unlock": false,
+            "date": 1709856003,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Exschwasion",
+                    "jacketDesigner": "黒兎 + Hitomasu Modoru",
+                    "rating": 2
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Exschwasion",
+                    "jacketDesigner": "黒兎 + Hitomasu Modoru",
+                    "rating": 5
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Exschwasion",
+                    "jacketDesigner": "黒兎 + Hitomasu Modoru",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "KLMNOP",
+                    "jacketDesigner": "黒兎 + Hitomasu Modoru",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 372,
+            "id": "innocence",
+            "title_localized": {
+                "en": "Innocence"
+            },
+            "artist": "Powerless feat. Sennzai",
+            "search_title": {
+                "ja": [
+                    "いのせんす"
+                ],
+                "ko": [
+                    "이노센스"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "ぱわーれす",
+                    "せんざい"
+                ],
+                "ko": [
+                    "파워리스",
+                    "센자이"
+                ]
+            },
+            "bpm": "190",
+            "bpm_base": 190,
+            "set": "single",
+            "purchase": "",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "vs_light",
+            "bg_inverse": "vs_conflict",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1709856004,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "First Dawn",
+                    "jacketDesigner": "すずなし",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "First Dawn",
+                    "jacketDesigner": "すずなし",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "First Dawn",
+                    "jacketDesigner": "すずなし",
+                    "rating": 8
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "First Dawn",
+                    "jacketDesigner": "すずなし",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 373,
+            "id": "ionostream",
+            "title_localized": {
+                "en": "IONOSTREAM"
+            },
+            "artist": "Tatsh",
+            "search_title": {
+                "ja": [
+                    "あいおのすとりーむ"
+                ],
+                "ko": [
+                    "아이오노스트림"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "たっしゅ"
+                ],
+                "ko": [
+                    "탓쉬",
+                    "탯쉬",
+                    "탓시",
+                    "탯시"
+                ]
+            },
+            "bpm": "220-254",
+            "bpm_base": 254,
+            "set": "single",
+            "purchase": "ionostream",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "nijuusei2_conflict",
+            "bg_inverse": "nijuusei2_light",
+            "remote_dl": true,
+            "source_localized": {
+                "en": "RESONARK"
+            },
+            "world_unlock": false,
+            "date": 1709856005,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "Cem, septem47",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "Cem, septem47",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Dec18 + Nitro",
+                    "jacketDesigner": "Cem, septem47",
+                    "rating": 8,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "Dec18 + Nitro",
+                    "jacketDesigner": "Cem, septem47",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 374,
+            "id": "alephzero",
+            "title_localized": {
+                "en": "Aleph-0"
+            },
+            "artist": "LeaF",
+            "search_title": {
+                "ja": [
+                    "あれふぜろ"
+                ],
+                "ko": [
+                    "알레프 제로"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "りーふ"
+                ],
+                "ko": [
+                    "리프"
+                ]
+            },
+            "bpm": "35-400",
+            "bpm_base": 250,
+            "set": "extend_2",
+            "purchase": "extend_2",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "single2_conflict",
+            "bg_inverse": "single2_light",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1709856006,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "ə₀",
+                    "jacketDesigner": "Optie",
+                    "rating": 5
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "ə₀",
+                    "jacketDesigner": "Optie",
+                    "rating": 8,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "ə₀",
+                    "jacketDesigner": "Optie",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 375,
+            "id": "masqueradelegion",
+            "title_localized": {
+                "en": "Masquerade Legion"
+            },
+            "artist": "Srav3R & DJ Noriken",
+            "search_title": {
+                "ja": [
+                    "ますかれーどれぎおん"
+                ],
+                "ko": [
+                    "마스커레이드 리전",
+                    "마스커레이드 레기온"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "すれいばー",
+                    "でぃーじぇーのりけん",
+                    "でぃーじぇいのりけん"
+                ],
+                "ko": [
+                    "슬레이버",
+                    "디제이 노리켄"
+                ]
+            },
+            "bpm": "175",
+            "bpm_base": 175,
+            "set": "single",
+            "purchase": "masqueradelegion",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "tanoc_conflict",
+            "bg_inverse": "tanoc_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1709856007,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Nitro 「The Veiled」",
+                    "jacketDesigner": "KEI",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Nitro 「The Veiled」",
+                    "jacketDesigner": "KEI",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Nitro 「The Veiled」",
+                    "jacketDesigner": "KEI",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 376,
+            "id": "kyorenromance",
+            "title_localized": {
+                "en": "KYOREN ROMANCE",
+				"ja": "狂恋ROMANCE"
+            },
+            "artist": "REDALiCE vs DJ Myosuke feat. DELUTAYA",
+            "search_title": {
+                "ja": [
+                    "きょうれんろまんす"
+                ],
+                "ko": [
+                    "쿄렌 로맨스",
+                    "광연 로맨스"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "れっどありす",
+                    "でぃーじぇーみょーすけ",
+                    "でぃーじぇーみょうすけ",
+                    "でぃーじぇいみょーすけ",
+                    "でぃーじぇいみょうすけ",
+                    "でるたや"
+                ],
+                "ko": [
+                    "레드 앨리스",
+                    "디제이 묘스케"
+                ]
+            },
+            "bpm": "205",
+            "bpm_base": 205,
+            "set": "single",
+            "purchase": "kyorenromance",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "saikyostronger",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1709856008,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Dec18 + Nitro",
+                    "jacketDesigner": "イカダ",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Dec18 + Nitro",
+                    "jacketDesigner": "イカダ",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Dec18 + Nitro",
+                    "jacketDesigner": "イカダ",
+                    "rating": 10,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 377,
+            "id": "qovat",
+            "title_localized": {
+                "en": "Qovat"
+            },
+            "artist": "owl＊tree",
+            "search_title": {
+                "ja": [
+                    "こばっと",
+                    "こゔぁっと"
+                ],
+                "ko": [
+                    "쿠오밧",
+                    "쿼밧",
+                    "코밧"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "おうるつりー"
+                ],
+                "ko": [
+                    "아울트리"
+                ]
+            },
+            "bpm": "122",
+            "bpm_base": 122,
+            "set": "single",
+            "purchase": "qovat",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "hime_conflict",
+            "bg_inverse": "hime_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1709856009,
+            "version": "5.4",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "ex＊tree",
+                    "jacketDesigner": "Watersnake",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "ex＊tree",
+                    "jacketDesigner": "Watersnake",
+                    "rating": 8
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "ny＊tree",
+                    "jacketDesigner": "Watersnake",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 378,
+            "id": "hellohell",
+            "title_localized": {
+                "en": "HELLOHELL"
+            },
+            "artist": "暁Records",
+            "search_title": {
+                "ja": [
+                    "はろーへる"
+                ],
+                "ko": [
+                    "헬로헬"
+                ]
+            },
+            "search_artist": {
+                "en": [
+                    "akatsuki records"
+                ],
+                "ja": [
+                    "あかつきれこーず"
+                ],
+                "ko": [
+                    "아카츠키 레코드"
+                ]
+            },
+            "bpm": "155",
+            "bpm_base": 155,
+            "set": "extend_3",
+            "purchase": "extend_3",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "touhou_conflict",
+            "bg_inverse": "touhou_light",
+            "source_copyright": "©上海アリス幻樂団",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1711324800,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "én",
+                    "jacketDesigner": "原之",
+                    "rating": 2
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "én",
+                    "jacketDesigner": "原之",
+                    "rating": 5
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "én",
+                    "jacketDesigner": "原之",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "eién",
+                    "jacketDesigner": "原之",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 379,
+            "id": "ichirin",
+            "title_localized": {
+                "en": "〇、"
+            },
+            "artist": "Kolaa & 熊子",
+            "search_title": {
+                "en": [
+                    "ichirin"
+                ],
+                "ja": [
+                    "いちりん"
+                ],
+                "ko": [
+                    "이치린"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "こーらー",
+                    "くまこ"
+                ],
+                "ko": [
+                    "콜라아"
+                ]
+            },
+            "bpm": "145",
+            "bpm_base": 145,
+            "set": "extend_3",
+            "purchase": "extend_3",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "prelude_light",
+            "bg_inverse": "prelude_conflict",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1711324801,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "CERiNG、",
+                    "jacketDesigner": "毛腿猪兔子 & Kolaa",
+                    "rating": 2
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "CERiNG、",
+                    "jacketDesigner": "毛腿猪兔子 & Kolaa",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "CERiNG、",
+                    "jacketDesigner": "毛腿猪兔子 & Kolaa",
+                    "rating": 9
+                }
+            ]
+        },
+        {
+            "idx": 380,
+            "id": "awakeninruins",
+            "title_localized": {
+                "en": "Awaken In Ruins"
+            },
+            "artist": "Supa7onyz",
+            "search_title": {
+                "ja": [
+                    "あうぇーくんいんるいんず"
+                ],
+                "ko": [
+                    "어웨이큰 인 루인즈"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "すーぱーとにーず"
+                ],
+                "ko": [
+                    "스파 토니즈",
+                    "수파 토니즈",
+                    "수퍼 토니즈",
+                    "슈퍼 토니즈"
+                ]
+            },
+            "bpm": "125",
+            "bpm_base": 125,
+            "set": "extend_3",
+            "purchase": "extend_3",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "prelude_conflict",
+            "bg_inverse": "prelude_light",
+            "remote_dl": true,
+            "world_unlock": true,
+            "source_localized": {
+                "en": "Paradigm: Reboot"
+            },
+            "source_copyright": "© TunerGames",
+            "date": 1711324802,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "antymis",
+                    "jacketDesigner": "人間蛋",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "antymis",
+                    "jacketDesigner": "人間蛋",
+                    "rating": 7
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "antymis",
+                    "jacketDesigner": "人間蛋",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 381,
+            "id": "morningloom",
+            "title_localized": {
+                "en": "MORNINGLOOM"
+            },
+            "artist": "saaa",
+            "search_title": {
+                "ja": [
+                    "もーにんぐるーむ"
+                ],
+                "ko": [
+                    "모닝글룸"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "さえさん"
+                ],
+                "ko": [
+                    "사아아아"
+                ]
+            },
+            "bpm": "102",
+            "bpm_base": 204,
+            "set": "extend_3",
+            "purchase": "extend_3",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "rei",
+            "bg_inverse": "yugamu",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1711324803,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Exschwasion • 8:00",
+                    "jacketDesigner": "すずあ",
+                    "rating": 3
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Exschwasion • 8:21",
+                    "jacketDesigner": "すずあ",
+                    "rating": 6
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Exschwasion • 8:45",
+                    "jacketDesigner": "すずあ",
+                    "rating": 8,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "Exschwasion • 8:46",
+                    "jacketDesigner": "すずあ",
+                    "rating": 9,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 382,
+            "id": "lethalvoltage",
+            "title_localized": {
+                "en": "Lethal Voltage"
+            },
+            "artist": "siqlo",
+            "search_title": {
+                "ja": [
+                    "りーさるぼるてーじ"
+                ],
+                "ko": [
+                    "리썰 볼티지",
+                    "리썰 볼테이지"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "さいくろ"
+                ],
+                "ko": [
+                    "사이클로"
+                ]
+            },
+            "bpm": "190",
+            "bpm_base": 190,
+            "set": "extend_3",
+            "purchase": "extend_3",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "single2_conflict",
+            "bg_inverse": "single2_light",
+            "remote_dl": true,
+            "world_unlock": true,
+            "date": 1711324804,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "moonquay [EMP]",
+                    "jacketDesigner": "mochi’s pizza",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "moonquay [FLASH]",
+                    "jacketDesigner": "mochi’s pizza",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "moonquay [SHOCK]",
+                    "jacketDesigner": "mochi’s pizza",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 383,
+            "id": "mirinae",
+            "title_localized": {
+                "en": "MIRINAE"
+            },
+            "artist": "TAK × Zekk",
+            "search_title": {
+                "ja": [
+                    "みりね",
+                    "みりねー"
+                ],
+                "ko": [
+                    "미리내"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "たっく",
+                    "ぜっく"
+                ],
+                "ko": [
+                    "탁",
+                    "젝",
+                    "제크"
+                ]
+            },
+            "bpm": "180",
+            "bpm_base": 180,
+            "set": "single",
+            "purchase": "mirinae",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "nijuusei2_light",
+            "bg_inverse": "nijuusei2_conflict",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1711324805,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "N↑TRO",
+                    "jacketDesigner": "すずなし",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "N↑TRO",
+                    "jacketDesigner": "すずなし",
+                    "rating": 8
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "N↑TRO",
+                    "jacketDesigner": "すずなし",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 384,
+            "id": "ultradiaxon",
+            "title_localized": {
+                "en": "ultradiaxon-N3"
+            },
+            "artist": "nitro (lowiro)",
+            "bpm": "150",
+            "bpm_base": 150,
+            "set": "single",
+            "purchase": "ultradiaxon",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "single2_conflict",
+            "bg_inverse": "single2_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1712016000,
+            "version": "5.5",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "MiyU",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "MiyU",
+                    "rating": 8
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "MiyU",
+                    "rating": 10
+                }
+            ]
         }
+
     ]
 }
