@@ -20,6 +20,7 @@ NUM = config["const"]["generate_amount"]  # 生成曲目数量
 GUESS_CHANCES = config["const"]["guess_chances"]  # 最初刮开可用次数
 DICT_FOLDER = P / config["path"]["dict_folder"]  # 曲库路径
 OUTPUT_FOLDER = P / config["path"]["output_folder"]  # 输出路径
+ENABLE_COPY = config["other"]["enable_clipboard"]  # 是否启用剪贴板
 
 # 创建输出文件夹（若不存在）
 OUTPUT_FOLDER.mkdir(exist_ok=True)
@@ -46,8 +47,9 @@ def load_dict(file_path: str):
 
 def copy(file: str):
     """复制文件内容到剪贴板函数"""
-    with open(OUTPUT_FOLDER / file, "r", encoding="utf-8") as text:
-        pyperclip.copy(text.read())
+    if ENABLE_COPY:
+        with open(OUTPUT_FOLDER / file, "r", encoding="utf-8") as text:
+            pyperclip.copy(text.read())
 
 
 def known_char(name: list):
@@ -150,63 +152,82 @@ IS_ALIVE = True
 
 while t != answer_list:
     command = input("\n>> ")  # 输入命令
-
-    # 替换命令别名
-    command_aliases = {
-        "heart": "h",
-        "open": "o",
-        "check": "c",
-        "exit": "e",
-        "show": "s",
-        "ver": "v",
-        "version": "v",
-        "help": "?",
-        "？": "?",
-        "openspace": "os",
-    }
     parts = command.split()
-    ACTION = command_aliases.get(parts[0], parts[0])
 
     if heart <= 0:
         IS_ALIVE = False
 
-    if ACTION == "?":
-        Output.h()
-    elif ACTION == "e":
-        sys.exit()
-    elif ACTION == "v":
-        for i, game in enumerate(games):
-            print(f"曲库使用的{game}版本：{versions[i]}")
+    match parts[0]:
+        case "?" | "？" | "help":
+            Output.h()
+        case "e" | "exit":
+            sys.exit()
+        case "v" | "ver" | "version":
+            for i, game in enumerate(games):
+                print(f"曲库使用的{game}版本：{versions[i]}")
 
-    elif ACTION == "o":
-        if not IS_ALIVE:
-            print("刮开机会已用完。")
-            continue
+        case "o" | "open":
+            if not IS_ALIVE:
+                print("刮开机会已用完。")
+                continue
 
-        if len(parts[1]) != 1:
-            print("无效的参数，应为单个字符。")
-        else:
-            input_char = parts[1]
-            if input_char in "-$( )*+.[]{{}}?\\^|/":
-                input_char = "\\" + input_char  # 转义字符
+            if len(parts[1]) != 1:
+                print("无效的参数，应为单个字符。")
+            else:
+                input_char = parts[1]
+                if input_char in "-$( )*+.[]{{}}?\\^|/":
+                    input_char = "\\" + input_char  # 转义字符
 
-            if input_char in opened_char_list:
+                if input_char in opened_char_list:
+                    print(f"这个字符已经刮开了！剩余次数：{heart}。")
+                else:
+                    opened_char_lowercase_list.append(parts[1].lower())
+                    if re.match(
+                        r"^[\u0041-\u005a\u0061-\u007a\u0391-\u03c9\u0400-\u04ff]$",
+                        input_char,
+                    ):  # 判断是否为字母
+                        opened_char_list.extend(
+                            [input_char.lower(), input_char.upper()]
+                        )  # 加入小写和大写
+                    else:
+                        opened_char_list.append(input_char)  # 加入非字母字符
+
+                    heart -= 1  # 扣除1点可用刮开次数
+
+                    print(f"刮开的字符：{parts[1]}。\n剩余次数：{heart}。")
+                    # 为正则替换而合并opened_char_list为字符串
+                    OPENED_CHAR = "".join(opened_char_list)
+                    # 使用正则替换刮开字符
+                    t = [
+                        re.sub(f"[^{OPENED_CHAR}]", "*", element)
+                        for element in answer_list
+                    ]
+                    # 将回答正确的全部刮开
+                    t = [
+                        answer_list[i] if tt[i] == answer_list[i] else t[i]
+                        for i in range(NUM)
+                    ]
+                    KC = known_char(opened_char_lowercase_list)
+                    Output.to_temp(KC, t, "Temp.txt")
+                    copy("Temp.txt")
+                    if KC:
+                        print(KC)
+                    Output.loop_print(t)
+                    tt, t = t, []  # 更新暂存
+        case "os" | "openspace":
+            if not IS_ALIVE:
+                print("刮开机会已用完。")
+                continue
+
+            if "空格" in opened_char_list:
                 print(f"这个字符已经刮开了！剩余次数：{heart}。")
             else:
-                opened_char_lowercase_list.append(parts[1].lower())
-                if re.match(
-                    r"^[\u0041-\u005a\u0061-\u007a\u0391-\u03c9\u0400-\u04ff]$",
-                    input_char,
-                ):  # 判断是否为字母
-                    opened_char_list.extend(
-                        [input_char.lower(), input_char.upper()]
-                    )  # 加入小写和大写
-                else:
-                    opened_char_list.append(input_char)  # 加入非字母字符
+                opened_char_list.append("\\s")
+                opened_char_lowercase_list.append("空格")
 
                 heart -= 1  # 扣除1点可用刮开次数
 
-                print(f"刮开的字符：{parts[1]}。\n剩余次数：{heart}。")
+                print(f"刮开的字符：空格。\n剩余次数：{heart}。")
                 # 为正则替换而合并opened_char_list为字符串
                 OPENED_CHAR = "".join(opened_char_list)
                 # 使用正则替换刮开字符
@@ -225,79 +246,50 @@ while t != answer_list:
                     print(KC)
                 Output.loop_print(t)
                 tt, t = t, []  # 更新暂存
-    elif ACTION == "os":
-        if not IS_ALIVE:
-            print("刮开机会已用完。")
-            continue
 
-        if "空格" in opened_char_list:
-            print(f"这个字符已经刮开了！剩余次数：{heart}。")
-        else:
-            opened_char_list.append("\\s")
-            opened_char_lowercase_list.append("空格")
-
-            heart -= 1  # 扣除1点可用刮开次数
-
-            print(f"刮开的字符：空格。\n剩余次数：{heart}。")
-            # 为正则替换而合并opened_char_list为字符串
-            OPENED_CHAR = "".join(opened_char_list)
-            # 使用正则替换刮开字符
-            t = [re.sub(f"[^{OPENED_CHAR}]", "*", element) for element in answer_list]
-            # 将回答正确的全部刮开
-            t = [
-                answer_list[i] if tt[i] == answer_list[i] else t[i] for i in range(NUM)
-            ]
-            KC = known_char(opened_char_lowercase_list)
-            Output.to_temp(KC, t, "Temp.txt")
-            copy("Temp.txt")
-            if KC:
-                print(KC)
-            Output.loop_print(t)
-            tt, t = t, []  # 更新暂存
-
-    elif ACTION == "c":
-        if not parts[1].isdigit():
-            print("无效的参数，应为数字。")
-        else:
-            n = int(parts[1])
-            if n > NUM or n < 1:
-                print("题目不存在。")
-            elif tt[n - 1] != answer_list[n - 1]:
-                print(f"编号为“{n}”的题目回答正确，全部刮开。")
-                tt[n - 1] = answer_list[n - 1]
-                KC = known_char(opened_char_lowercase_list)
-                Output.to_temp(KC, tt, "Temp.txt")
-                copy("Temp.txt")
-                if KC:
-                    print(KC)
-                Output.loop_print(tt)
-                t = tt
+        case "c" | "check":
+            if not parts[1].isdigit():
+                print("无效的参数，应为数字。")
             else:
-                print(f"编号为“{n}”的题目已经回答正确。")
-
-    elif ACTION == "h":
-        if len(parts) == 3:
-            if parts[1] == "add" or parts[1] == "remove":
-                amount = int(parts[2]) if len(parts) > 2 else 1
-                if parts[1] == "add":
-                    heart += amount
-                    print(f"已增加{amount}次可用刮开次数。\n剩余次数：{heart}。")
+                n = int(parts[1])
+                if n > NUM or n < 1:
+                    print("题目不存在。")
+                elif tt[n - 1] != answer_list[n - 1]:
+                    print(f"编号为“{n}”的题目回答正确，全部刮开。")
+                    tt[n - 1] = answer_list[n - 1]
+                    KC = known_char(opened_char_lowercase_list)
+                    Output.to_temp(KC, tt, "Temp.txt")
+                    copy("Temp.txt")
+                    if KC:
+                        print(KC)
+                    Output.loop_print(tt)
+                    t = tt
                 else:
-                    heart -= amount
-                    print(f"已减少{amount}次可用刮开次数。\n剩余次数：{heart}。")
+                    print(f"编号为“{n}”的题目已经回答正确。")
+
+        case "h" | "heart":
+            if len(parts) == 3:
+                if parts[1] == "add" or parts[1] == "remove":
+                    amount = int(parts[2]) if len(parts) > 2 else 1
+                    if parts[1] == "add":
+                        heart += amount
+                        print(f"已增加{amount}次可用刮开次数。\n剩余次数：{heart}。")
+                    else:
+                        heart -= amount
+                        print(f"已减少{amount}次可用刮开次数。\n剩余次数：{heart}。")
+                else:
+                    print("无效的命令，请重试。")
             else:
                 print("无效的命令，请重试。")
-        else:
-            print("无效的命令，请重试。")
 
-    elif ACTION == "s":
-        if not t:
-            Output.loop_print(tt)
-        else:
-            Output.loop_print(t)
-        copy("Temp.txt")
-    else:
-        print("无效的命令，请重试。")
+        case "s" | "show":
+            if not t:
+                Output.loop_print(tt)
+            else:
+                Output.loop_print(t)
+            copy("Temp.txt")
+        case _:
+            print("无效的命令，请重试。")
 
 if ACTION != "e":
     print("\n全部题目已回答正确，答案为：")

@@ -9,3 +9,7 @@ guess_chances = 10
 output_folder = "output"
 # 曲库文件夹
 dict_folder = "song_dict"
+
+[other]
+# 是否启用复制到剪贴板
+enable_clipboard = true
