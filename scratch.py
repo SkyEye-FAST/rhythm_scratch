@@ -45,7 +45,7 @@ def load_dict(file_path: str):
         return [line.strip() for line in dict_file]
 
 
-def copy(file: str):
+def copy_to_clipboard(file: str):
     """复制文件内容到剪贴板函数"""
     if ENABLE_COPY:
         with open(OUTPUT_FOLDER / file, "r", encoding="utf-8") as text:
@@ -81,7 +81,7 @@ class Output:
         return [print(f"{i + 1}. {element}") for i, element in enumerate(name)]
 
     @staticmethod
-    def h():
+    def show_help():
         """输出帮助函数"""
         print("可用命令：")
         print("  help | ? - 显示帮助")
@@ -94,11 +94,17 @@ class Output:
         print("  (check | c) [index] - 将某题全部刮开")
         print("  (show | s) - 显示题目")
 
+    @staticmethod
+    def show_dicts():
+        "显示曲库"
+        for i, game in enumerate(games):
+            print(f"{i + 1}. {game}（游戏版本：{versions[i]}）")
+
 
 print("音游猜曲名刮刮乐\n作者：SkyEye_FAST\n\n可用的曲库：")
 # 输出曲库列表
-for i, game in enumerate(games):
-    print(f"{i + 1}. {game}（游戏版本：{versions[i]}）")
+Output.show_dicts()
+
 # 选择曲库
 selected_dicts = input("请选择曲库编号，以逗号分隔：\n\n>> ").split(",")
 selected_dicts = [
@@ -107,9 +113,9 @@ selected_dicts = [
 if len(selected_dicts) == 0:
     print("未按格式输入，请重试。")
     sys.exit()
+
 # 加载曲库
 selected_dict_content = []
-
 for index in selected_dicts:
     if 1 <= index <= len(all_dicts_folder):
         get_folder = all_dicts_folder[index - 1]
@@ -123,7 +129,6 @@ for index in selected_dicts:
         print(f"已加载曲库“{games[index - 1]}”。")
     else:
         print(f"编号为“{index}”的曲库不存在，忽略。")
-
 selected_dict_content = list(set(selected_dict_content))  # 去除重复曲目
 TOTAL_SELECTED = len(selected_dict_content)
 print(f"选择曲目总数：{TOTAL_SELECTED}\n")
@@ -133,11 +138,9 @@ answer_list = sample(selected_dict_content, NUM)
 Output.to_file(answer_list, "Answer.txt")
 
 # 生成初始问题
-question_list = []
-for element in answer_list:
-    question_list.append("*" * len(element))
+question_list = ["*" * len(element) for element in answer_list]
 Output.to_file(question_list, "Question.txt")
-copy("Question.txt")
+copy_to_clipboard("Question.txt")
 print("输入“?”来查看帮助。\n\n题目：")
 Output.loop_print(question_list)
 
@@ -159,12 +162,11 @@ while t != answer_list:
 
     match parts[0]:
         case "?" | "？" | "help":
-            Output.h()
+            Output.show_help()
         case "e" | "exit":
             sys.exit()
         case "v" | "ver" | "version":
-            for i, game in enumerate(games):
-                print(f"曲库使用的{game}版本：{versions[i]}")
+            Output.show_dicts()
 
         case "o" | "open":
             if not IS_ALIVE:
@@ -209,7 +211,7 @@ while t != answer_list:
                     ]
                     KC = known_char(opened_char_lowercase_list)
                     Output.to_temp(KC, t, "Temp.txt")
-                    copy("Temp.txt")
+                    copy_to_clipboard("Temp.txt")
                     if KC:
                         print(KC)
                     Output.loop_print(t)
@@ -241,7 +243,7 @@ while t != answer_list:
                 ]
                 KC = known_char(opened_char_lowercase_list)
                 Output.to_temp(KC, t, "Temp.txt")
-                copy("Temp.txt")
+                copy_to_clipboard("Temp.txt")
                 if KC:
                     print(KC)
                 Output.loop_print(t)
@@ -259,7 +261,7 @@ while t != answer_list:
                     tt[n - 1] = answer_list[n - 1]
                     KC = known_char(opened_char_lowercase_list)
                     Output.to_temp(KC, tt, "Temp.txt")
-                    copy("Temp.txt")
+                    copy_to_clipboard("Temp.txt")
                     if KC:
                         print(KC)
                     Output.loop_print(tt)
@@ -269,7 +271,7 @@ while t != answer_list:
 
         case "h" | "heart":
             if len(parts) == 3:
-                if parts[1] == "add" or parts[1] == "remove":
+                if parts[1] in {"add", "remove"}:
                     amount = int(parts[2]) if len(parts) > 2 else 1
                     if parts[1] == "add":
                         heart += amount
@@ -287,11 +289,11 @@ while t != answer_list:
                 Output.loop_print(tt)
             else:
                 Output.loop_print(t)
-            copy("Temp.txt")
+            copy_to_clipboard("Temp.txt")
         case _:
             print("无效的命令，请重试。")
 
 if ACTION != "e":
     print("\n全部题目已回答正确，答案为：")
     Output.loop_print(answer_list)
-    copy("Answer.txt")
+    copy_to_clipboard("Answer.txt")
