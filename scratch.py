@@ -39,7 +39,7 @@ for folder in all_dicts_folder:
         versions.append(dict_config["version"])
 
 
-def load_dict(file_path: str):
+def load_dict(file_path: str) -> list[str]:
     """加载曲库为列表函数"""
     with open(file_path, "r", encoding="utf-8") as dict_file:
         return [line.strip() for line in dict_file]
@@ -52,7 +52,7 @@ def copy_to_clipboard(file: str):
             pyperclip.copy(text.read())
 
 
-def known_char(name: list):
+def known_char(name: list) -> str:
     """已开字符函数"""
     return f"已开字符：{'、'.join(name)}。" if name else ""
 
@@ -78,7 +78,8 @@ class Output:
     @staticmethod
     def loop_print(name: list):
         """循环输出函数"""
-        return [print(f"{i + 1}. {element}") for i, element in enumerate(name)]
+        for i, ele in enumerate(name):
+            print(f"{i + 1}. {ele}")
 
     @staticmethod
     def show_help():
