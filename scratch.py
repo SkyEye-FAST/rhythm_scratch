@@ -16,21 +16,21 @@ with open(P / "configuration.toml", "rb") as f:
     config = tomllib.load(f)
 
 # 常量
-NUM = config["const"]["generate_amount"]  # 生成曲目数量
-GUESS_CHANCES = config["const"]["guess_chances"]  # 最初刮开可用次数
+NUM: int = config["const"]["generate_amount"]  # 生成曲目数量
+GUESS_CHANCES: int = config["const"]["guess_chances"]  # 最初刮开可用次数
 DICT_FOLDER = P / config["path"]["dict_folder"]  # 曲库路径
 OUTPUT_FOLDER = P / config["path"]["output_folder"]  # 输出路径
-ENABLE_COPY = config["other"]["enable_clipboard"]  # 是否启用剪贴板
+ENABLE_COPY: bool = config["other"]["enable_clipboard"]  # 是否启用剪贴板
 
 # 创建输出文件夹（若不存在）
 OUTPUT_FOLDER.mkdir(exist_ok=True)
 
 # 加载曲库列表
-all_dicts_folder = [
+all_dicts_folder: list[Path] = [
     i for i in DICT_FOLDER.iterdir() if (DICT_FOLDER / i / "dict.toml").exists()
 ]
-games = []
-versions = []
+games: list[str] = []
+versions: list[str] = []
 for folder in all_dicts_folder:
     dict_config = DICT_FOLDER / folder / "dict.toml"
     with open(dict_config, "rb") as f:
@@ -107,17 +107,17 @@ print("音游猜曲名刮刮乐\n作者：SkyEye_FAST\n\n可用的曲库：")
 Output.show_dicts()
 
 # 选择曲库
-selected_dicts = input("请选择曲库编号，以逗号分隔：\n\n>> ").split(",")
-selected_dicts = [
+selected_dicts: list[str] = input("请选择曲库编号，以逗号分隔：\n\n>> ").split(",")
+selected_dicts_int: list[int] = [
     int(index.strip()) for index in selected_dicts if index.strip().isdigit()
 ]
-if len(selected_dicts) == 0:
+if len(selected_dicts_int) == 0:
     print("未按格式输入，请重试。")
     sys.exit()
 
 # 加载曲库
-selected_dict_content = []
-for index in selected_dicts:
+selected_dict_content: list[str] = []
+for index in selected_dicts_int:
     if 1 <= index <= len(all_dicts_folder):
         get_folder = all_dicts_folder[index - 1]
         dict_config_file = DICT_FOLDER / get_folder / "dict.toml"
@@ -135,24 +135,24 @@ TOTAL_SELECTED = len(selected_dict_content)
 print(f"选择曲目总数：{TOTAL_SELECTED}\n")
 
 # 生成答案
-answer_list = sample(selected_dict_content, NUM)
+answer_list: list[str] = sample(selected_dict_content, NUM)
 Output.to_file(answer_list, "Answer.txt")
 
 # 生成初始问题
-question_list = ["*" * len(element) for element in answer_list]
+question_list: list[str] = ["*" * len(element) for element in answer_list]
 Output.to_file(question_list, "Question.txt")
 copy_to_clipboard("Question.txt")
 print("输入“?”来查看帮助。\n\n题目：")
 Output.loop_print(question_list)
 
 # 刮卡
-ACTION = ""
-heart = GUESS_CHANCES  # 刮开可用次数
-t = question_list  # 题目暂存
-tt = question_list  # 题目暂存的暂存
-opened_char_list = []  # 刮开的字符，字母大小写
-opened_char_lowercase_list = []  # 刮开的字符，字母全部小写
-IS_ALIVE = True
+ACTION: str = ""
+heart: int = GUESS_CHANCES  # 刮开可用次数
+t: list[str] = question_list  # 题目暂存
+tt: list[str] = question_list  # 题目暂存的暂存
+opened_char_list: list[str] = []  # 刮开的字符，字母大小写
+opened_char_lowercase_list: list[str] = []  # 刮开的字符，字母全部小写
+IS_ALIVE: bool = True
 
 while t != answer_list:
     command = input("\n>> ")  # 输入命令
@@ -177,9 +177,9 @@ while t != answer_list:
             if len(parts[1]) != 1:
                 print("无效的参数，应为单个字符。")
             else:
-                input_char = parts[1]
+                input_char: str = parts[1]
                 if input_char in "-$( )*+.[]{{}}?\\^|/":
-                    input_char = "\\" + input_char  # 转义字符
+                    input_char: str = "\\" + input_char  # 转义字符
 
                 if input_char in opened_char_list:
                     print(f"这个字符已经刮开了！剩余次数：{heart}。")
